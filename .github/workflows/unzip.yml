@@ -1,0 +1,27 @@
+name: Unzip Files
+
+on:
+  push:
+    paths:
+      - '*.zip'
+
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository content
+        uses: actions/checkout@v3
+
+      - name: Unzip files
+        run: |
+          for file in *.zip; do
+            unzip "$file" -d "${file%.zip}";
+          done
+
+      - name: Commit unzipped files
+        run: |
+          git config --global user.name "Your Name"
+          git config --global user.email "your.email@example.com"
+          git add .
+          git commit -m "Unzipped files"
+          git push
