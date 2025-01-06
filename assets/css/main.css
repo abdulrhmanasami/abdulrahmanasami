@@ -1460,3 +1460,44 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/* Responsive Design */
+
+/* For devices with a width less than 768px */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .hero-section img {
+    max-width: 100%;
+    height: auto;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .portfolio-item {
+    width: 100%;
+  }
+}
+
+/* For devices with a width less than 576px */
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 20px 10px;
+    text-align: center;
+  }
+  .hero-section img {
+    width: 80%;
+  }
+  .navbar-brand {
+    font-size: 18px;
+  }
+  .btn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
