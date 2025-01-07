@@ -81,10 +81,10 @@
    */
   function aosInit() {
     AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
+      duration: 1000, // مدة الحركة بالميلي ثانية
+      easing: 'ease-in-out', // نوع الحركة
+      once: true, // تشغيل التأثير مرة واحدة فقط
+      mirror: false // عدم تكرار الحركة عند التمرير للأعلى
     });
   }
   window.addEventListener('load', aosInit);
