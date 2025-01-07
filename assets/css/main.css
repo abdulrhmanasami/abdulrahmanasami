@@ -538,6 +538,13 @@ section,
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+  .hero img {
+    content: url('assets/img/hero-bg-mobile.jpg'); /* الصورة المخصصة للموبايل */
+  }
+}
+
+
 .hero:before {
   content: "";
   background: color-mix(in srgb, var(--background-color), transparent 30%);
