@@ -87,7 +87,7 @@
       mirror: false // عدم تكرار الحركة عند التمرير للأعلى
     });
   }
-  window.addEventListener('load', aosInit);
+  window.addEventListener('load', aosInit); // تم التأكد من تضمين تهيئة AOS هنا
 
   /**
    * Init typed.js
