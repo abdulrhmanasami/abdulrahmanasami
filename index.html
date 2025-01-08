@@ -21,9 +21,6 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
 <body class="index-page">
@@ -49,10 +46,10 @@
       <img src="assets/img/hero-bg.jpg" alt="zoom-out">
       <div class="container" data-aos="zoom-out">
         <div class="row justify-content-center">
-          <div class="col-lg-9">
+          <div class="col-lg-13 text-center">
             <h2><span id="typed-name"></span></h2>
             <p>
-              <span class="typed" data-typed-items="Technischer Produktdesigner, Produktentwickler, CAD-Spezialist, 3D-Visualizer"></span>
+              <span id="typed-items"></span>
               <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
             </p>
             <div class="social-links">
@@ -68,8 +65,8 @@
     <!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section">
-      <div class="container section-title" data-aos="fade-up">
+    <section id="about" class="about section" data-aos="fade-up" data-aos-delay="300">
+      <div class="container section-title">
         <h2>Über mich</h2>
         <p><span id="typed-about"></span></p>
       </div>
@@ -79,10 +76,21 @@
             <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 content">
-            <h2>Technischer Produktdesigner Maschinen- und Anlagenkonstruktion</h2>
-            <p class="fst-italic py-6">
-              Ich bin ein angehender Technischer Produktdesigner mit einem besonderen Interesse an Maschinen- und Anlagenkonstruktion. Ich kombiniere technisches Wissen mit kreativem Denken, um innovative und effiziente Lösungen zu entwickeln.
-            </p>
+            <h2>Technischer Produktdesigner & 3D-Visualizer</h2>
+            <div id="typed-info">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Geburtstag:</strong> <span>10. Dezember 1983</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Webseite:</strong> <span>abdulrahmanasami.com</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Telefon:</strong> <span>+49 160-95793713</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Stadt:</strong> <span>Hürth, Deutschland</span></li>
+              </ul>
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Alter:</strong> <span>40</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Abschluss:</strong> <span>Zertifizierung als Technischer Produktdesigner (in Ausbildung)</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>abdulrhman.asami@gmail.com</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Freiberuflich:</strong> <span>Verfügbar</span></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -102,19 +110,49 @@
         once: true
       });
 
-      // Typed.js for the Hero Section
+      // Typed.js for Hero Section
       new Typed('#typed-name', {
         strings: ['Asami Abdulrahman'],
         typeSpeed: 100,
         loop: false
       });
 
-      // Typed.js for the About Section
+      // Typed.js for rotating text in Hero Section
+      new Typed('#typed-items', {
+        strings: ['Technischer Produktdesigner', 'Produktentwickler', 'CAD-Spezialist', '3D-Visualizer'],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+      });
+
+      // Typed.js for About Section
       new Typed('#typed-about', {
         strings: [
           `Ich bin derzeit ein angehender Technischer Produktdesigner mit einem Schwerpunkt auf Maschinen- und Anlagenkonstruktion. Während meiner Ausbildung am Berufsförderungswerk Köln erweitere ich meine Fähigkeiten in CAD-Software wie SolidWorks und vertiefe mein Wissen in der technischen Produktentwicklung. Mit großer Leidenschaft für innovative Lösungen und einem Auge fürs Detail strebe ich danach, hochwertige und effiziente Designs zu entwickeln. Mein Ziel ist es, nach meinem Abschluss in diesem Bereich einen echten Beitrag zu leisten und mich kontinuierlich weiterzuentwickeln.`
         ],
-        typeSpeed: 10,
+        typeSpeed: 30,
+        loop: false
+      });
+
+      // Typed.js for info in About Section
+      new Typed('#typed-info', {
+        strings: [
+          `
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Geburtstag:</strong> <span>10. Dezember 1983</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Webseite:</strong> <span>abdulrahmanasami.com</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Telefon:</strong> <span>+49 160-95793713</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Stadt:</strong> <span>Hürth, Deutschland</span></li>
+            </ul>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Alter:</strong> <span>40</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Abschluss:</strong> <span>Zertifizierung als Technischer Produktdesigner (in Ausbildung)</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>abdulrhman.asami@gmail.com</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Freiberuflich:</strong> <span>Verfügbar</span></li>
+            </ul>
+          `
+        ],
+        typeSpeed: 40,
         loop: false
       });
     });
