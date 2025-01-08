@@ -122,8 +122,10 @@
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
     <h2>Über mich</h2>
-    <!-- النص مع تأثير الكتابة -->
-    <p id="typed-about">Loading...</p>
+    <!-- النص الطويل مع تأثير الكتابة -->
+    <p>
+      <span id="typed-about"></span>
+    </p>
   </div>
 </section>
 
@@ -131,14 +133,20 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     // تشغيل تأثير الكتابة على النص الطويل
-    new Typed('#typed-about', {
+    const options = {
       strings: [
-        'Ich bin derzeit ein angehender Technischer Produktdesigner in der Fachrichtung auf Maschinen- und Anlagenkonstruktion. Während meiner Ausbildung am Berufsförderungswerk Köln erweitere ich meine Fähigkeiten in CAD-Software wie SolidWorks und vertiefe mein Wissen in der technischen Produktentwicklung. Mit großer Leidenschaft für innovative Lösungen und einem Auge fürs Detail strebe ich danach, hochwertige und effiziente Designs zu entwickeln. Mein Ziel ist es, nach meinem Abschluss in diesem Bereich einen echten Beitrag zu leisten und mich kontinuierlich weiterzuentwickeln.'
+        `Ich bin derzeit ein angehender Technischer Produktdesigner mit einem Schwerpunkt auf Maschinen- und Anlagenkonstruktion. 
+        Während meiner Ausbildung am Berufsförderungswerk Köln erweitere ich meine Fähigkeiten in CAD-Software wie SolidWorks und 
+        vertiefe mein Wissen in der technischen Produktentwicklung. Mit großer Leidenschaft für innovative Lösungen und einem Auge 
+        fürs Detail strebe ich danach, hochwertige und effiziente Designs zu entwickeln. Mein Ziel ist es, nach meinem Abschluss in 
+        diesem Bereich einen echten Beitrag zu leisten und mich kontinuierlich weiterzuentwickeln.`
       ],
       typeSpeed: 50, // سرعة الكتابة
       backSpeed: 0, // لا يوجد حذف
       loop: false, // عدم التكرار
-    });
+    };
+
+    new Typed('#typed-about', options);
   });
 </script>
 
