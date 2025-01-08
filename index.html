@@ -13,29 +13,64 @@
 </head>
 
 <body>
-  <!-- محتوى الموقع -->
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- إضافة مكتبات JavaScript -->
+  <main class="main">
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+      <picture>
+        <source srcset="assets/img/hero-bg-mobile.jpg" media="(max-width: 768px)">
+        <img src="assets/img/hero-bg.jpg" alt="Hero Background" loading="lazy" data-aos="fade-in" data-aos-duration="1000">
+      </picture>
+
+      <div class="container" data-aos="fade-up" data-aos-duration="800">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 text-center">
+            <h2>
+              <span id="typed-name"></span>
+            </h2>
+            <p>
+              <span class="typed" data-typed-items="Technischer Produktdesigner, 3D-Visualizer, CAD-Spezialist, Produktentwickler"></span>
+              <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section" data-aos="fade-up" data-aos-delay="300">
+      <div class="container section-title">
+        <h2>Über mich</h2>
+        <p>
+          <span id="typed-about"></span>
+        </p>
+      </div>
+    </section>
+    <!-- /About Section -->
+  </main>
+
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-
-  <!-- كود تعديل Typed.js و AOS.js -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Initialize AOS
-      AOS.init({
-        duration: 1000,
-        once: true
-      });
+      AOS.init({ duration: 1000, once: true });
 
-      // Initialize Typed.js for the name
       new Typed('#typed-name', {
         strings: ['Asami Abdulrahman'],
         typeSpeed: 100,
         loop: false
       });
 
-      // Initialize Typed.js for the about section
       new Typed('#typed-about', {
         strings: [
           `Ich bin derzeit ein angehender Technischer Produktdesigner mit einem Schwerpunkt auf Maschinen- und Anlagenkonstruktion. 
@@ -51,7 +86,6 @@
   </script>
 </body>
 
-</html>
    <!-- Skills Section -->
 <section id="skills" class="skills section">
 
