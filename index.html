@@ -5,17 +5,6 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>TPD Asami</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,71 +12,39 @@
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body class="index-page">
+<body>
+  <!-- محتوى الموقع -->
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero section light-background">
-    <picture>
-      <source srcset="assets/img/hero-bg-mobile.jpg" media="(max-width: 768px)">
-      <img src="assets/img/hero-bg.jpg" alt="Hero Background" loading="lazy" data-aos="fade-in" data-aos-duration="1000">
-    </picture>
-
-    <div class="container" data-aos="fade-up" data-aos-duration="800">
-      <div class="row justify-content-center">
-        <div class="col-lg-12 text-center">
-          <h2>
-            <span id="typed-name"></span>
-          </h2>
-          <p>
-            <span class="typed" data-typed-items="Technischer Produktdesigner, 3D-Visualizer, CAD-Spezialist, Produktentwickler"></span>
-            <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- /Hero Section -->
-
-  <!-- About Section -->
-  <section id="about" class="about section" data-aos="fade-up" data-aos-delay="300">
-    <div class="container section-title">
-      <h2>Über mich</h2>
-      <p>
-        <span id="typed-about"></span>
-      </p>
-    </div>
-  </section>
-  <!-- /About Section -->
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- إضافة مكتبات JavaScript -->
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script>
-    // Initialize AOS
-    AOS.init({
-      duration: 1000,
-      once: true // تشغيل التأثير مرة واحدة فقط
-    });
 
-    // تأثير الكتابة على الاسم
+  <!-- كود تعديل Typed.js و AOS.js -->
+  <script>
     document.addEventListener('DOMContentLoaded', function () {
+      // Initialize AOS
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+
+      // Initialize Typed.js for the name
       new Typed('#typed-name', {
         strings: ['Asami Abdulrahman'],
         typeSpeed: 100,
         loop: false
       });
 
-      // تأثير الكتابة على النص الطويل
+      // Initialize Typed.js for the about section
       new Typed('#typed-about', {
         strings: [
           `Ich bin derzeit ein angehender Technischer Produktdesigner mit einem Schwerpunkt auf Maschinen- und Anlagenkonstruktion. 
           Während meiner Ausbildung am Berufsförderungswerk Köln erweitere ich meine Fähigkeiten in CAD-Software wie SolidWorks und 
           vertiefe mein Wissen in der technischen Produktentwicklung. Mit großer Leidenschaft für innovative Lösungen und einem Auge 
-          fürs Detail strebe ich danach, hochwertige und effiziente Designs zu entwickeln. Mein Ziel ist es, nach meinem Abschluss in 
+          fürs Detail strebe ich danach, hochwertige und effiziente Designs zu entwickeln. Mein Ziel ist es، nach meinem Abschluss in 
           diesem Bereich einen echten Beitrag zu leisten und mich kontinuierlich weiterzuentwickeln.`
         ],
-        typeSpeed: 100,
+        typeSpeed: 50,
         loop: false
       });
     });
