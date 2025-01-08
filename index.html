@@ -5,42 +5,62 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>TPD Asami</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="index-page">
+
   <header id="header" class="header d-flex flex-column justify-content-center">
     <i class="header-toggle d-xl-none bi bi-list"></i>
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
       </ul>
     </nav>
   </header>
 
   <main class="main">
+
     <!-- Hero Section -->
     <section id="hero" class="hero section light-background">
-      <picture>
-        <source srcset="assets/img/hero-bg-mobile.jpg" media="(max-width: 768px)">
-        <img src="assets/img/hero-bg.jpg" alt="Hero Background" loading="lazy" data-aos="fade-in" data-aos-duration="1000">
-      </picture>
-
-      <div class="container" data-aos="fade-up" data-aos-duration="800">
+      <img src="assets/img/hero-bg.jpg" alt="zoom-out">
+      <div class="container" data-aos="zoom-out">
         <div class="row justify-content-center">
-          <div class="col-lg-12 text-center">
-            <h2>
-              <span id="typed-name"></span>
-            </h2>
+          <div class="col-lg-13">
+            <h2><span id="typed-name"></span></h2>
             <p>
               <span class="typed" data-typed-items="Technischer Produktdesigner, 3D-Visualizer, CAD-Spezialist, Produktentwickler"></span>
               <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
             </p>
+            <div class="social-links">
+              <a href="#"><i class="bi bi-twitter-x"></i></a>
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
           </div>
         </div>
       </div>
@@ -48,38 +68,53 @@
     <!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section" data-aos="fade-up" data-aos-delay="300">
-      <div class="container section-title">
+    <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up">
         <h2>Über mich</h2>
-        <p>
-          <span id="typed-about"></span>
-        </p>
+        <p><span id="typed-about"></span></p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 content">
+            <h2>Technischer Produktdesigner & 3D-Visualizer</h2>
+            <p class="fst-italic py-3">
+              Ich bin ein angehender Technischer Produktdesigner mit einem besonderen Interesse an Maschinen- und Anlagenkonstruktion. Ich kombiniere technisches Wissen mit kreativem Denken, um innovative und effiziente Lösungen zu entwickeln.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
     <!-- /About Section -->
+
   </main>
 
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      AOS.init({ duration: 1000, once: true });
+      // Initialize AOS
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
 
+      // Typed.js for the Hero Section
       new Typed('#typed-name', {
         strings: ['Asami Abdulrahman'],
         typeSpeed: 100,
         loop: false
       });
 
+      // Typed.js for the About Section
       new Typed('#typed-about', {
         strings: [
-          `Ich bin derzeit ein angehender Technischer Produktdesigner mit einem Schwerpunkt auf Maschinen- und Anlagenkonstruktion. 
-          Während meiner Ausbildung am Berufsförderungswerk Köln erweitere ich meine Fähigkeiten in CAD-Software wie SolidWorks und 
-          vertiefe mein Wissen in der technischen Produktentwicklung. Mit großer Leidenschaft für innovative Lösungen und einem Auge 
-          fürs Detail strebe ich danach, hochwertige und effiziente Designs zu entwickeln. Mein Ziel ist es، nach meinem Abschluss in 
-          diesem Bereich einen echten Beitrag zu leisten und mich kontinuierlich weiterzuentwickeln.`
+          `Ich bin derzeit ein angehender Technischer Produktdesigner mit einem Schwerpunkt auf Maschinen- und Anlagenkonstruktion. Während meiner Ausbildung am Berufsförderungswerk Köln erweitere ich meine Fähigkeiten in CAD-Software wie SolidWorks und vertiefe mein Wissen in der technischen Produktentwicklung. Mit großer Leidenschaft für innovative Lösungen und einem Auge fürs Detail strebe ich danach, hochwertige und effiziente Designs zu entwickeln. Mein Ziel ist es, nach meinem Abschluss in diesem Bereich einen echten Beitrag zu leisten und mich kontinuierlich weiterzuentwickeln.`
         ],
-        typeSpeed: 50,
+        typeSpeed: 100,
         loop: false
       });
     });
