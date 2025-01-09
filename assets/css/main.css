@@ -630,6 +630,12 @@ section,
   color: var(--accent-color);
   line-height: 0;
 }
+#typed-about {
+    font-size: 20px; /* تعديل حجم الخط */
+    font-weight: bold; /* جعل النص عريضًا */
+    line-height: 1.5; /* تحسين المسافة بين الأسطر */
+    color: var(--heading-color); /* التأكد من أن اللون يتماشى مع العنوان */
+}
 
 /*--------------------------------------------------------------
 # Stats Section
