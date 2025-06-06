@@ -1,0 +1,84 @@
+/* أنماط السيرة التقنية */
+.resume-item {
+  border-left: 3px solid #0d6efd;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.resume-item::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  background: #0d6efd;
+  border-radius: 50%;
+}
+
+.resume-header {
+  margin-bottom: 1rem;
+}
+
+.resume-meta {
+  display: flex;
+  justify-content: space-between;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.technical-skills {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skill-level {
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  position: relative;
+}
+
+.level-bar {
+  height: 100%;
+  background: #0d6efd;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.level-text {
+  position: absolute;
+  right: 0;
+  top: -20px;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.btn-reference {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #0d6efd;
+  border-radius: 4px;
+  color: #0d6efd;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-reference:hover {
+  background: #0d6efd;
+  color: white;
+}
+
+.cert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #e9ecef;
+  border-radius: 20px;
+  margin: 0.3rem;
+} 

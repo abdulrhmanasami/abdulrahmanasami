@@ -1,0 +1,245 @@
+/* 1. المتغيرات الأساسية */
+:root {
+  /* الألوان */
+  --color-primary: #2B5F8A;    /* اللون الأساسي */
+  --color-secondary: #6C757D;  /* اللون الثانوي */
+  --color-success: #28A745;    /* نجاح */
+  --color-danger: #DC3545;     /* خطأ */
+  --color-light: #F8F9FA;      /* خلفيات فاتحة */
+  --color-dark: #212529;       /* نصوص داكنة */
+
+  /* الطباعة */
+  --font-base: 1rem;
+  --font-scale: 1.25;
+  --h1: calc(var(--font-base) * var(--font-scale) * 3);
+  --h2: calc(var(--h1) / var(--font-scale));
+  --h3: calc(var(--h2) / var(--font-scale));
+  
+  /* التباعد */
+  --space-unit: 1rem;
+  --space-xs: calc(var(--space-unit) * 0.5);
+  --space-sm: calc(var(--space-unit) * 1);
+  --space-md: calc(var(--space-unit) * 1.5);
+  --space-lg: calc(var(--space-unit) * 2);
+
+  /* الظلال */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
+  
+  /* الزوايا */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+}
+
+/* 2. المكونات القابلة لإعادة الاستخدام */
+/* الأزرار */
+.btn {
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+  border: 2px solid var(--color-primary);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* البطاقات */
+.card {
+  background: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-md);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+/* نظام الشبكات */
+.grid-system {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* 3. تطبيق النظام على الأقسام */
+#portfolio .section-title {
+  font-size: var(--h2);
+  margin-bottom: var(--space-lg);
+}
+
+#portfolio .grid-system {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+#portfolio .card {
+  background: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-md);
+  transition: transform 0.3s ease;
+}
+
+#portfolio .card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+/* 4. التوثيق التفاعلي */
+.style-guide {
+  padding: var(--space-lg);
+  background: var(--color-light);
+}
+
+.color-palette {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.color-item {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.component-preview {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-lg);
+}
+
+.code-snippet {
+  background: var(--color-dark);
+  color: white;
+  padding: var(--space-md);
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+}
+
+/* إضافة تحسينات للهواتف */
+@media (max-width: 768px) {
+  :root {
+    --font-base: 0.9rem;
+    --space-unit: 0.8rem;
+  }
+  
+  #portfolio .grid-system {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* تحسينات للوضع المظلم */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #3A86FF;
+    --color-light: #121212;
+    --color-dark: #FFFFFF;
+  }
+  
+  #portfolio .card {
+    background: #1e1e1e;
+  }
+}
+
+/* تفاعل البطاقات */
+.card-hover, .card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: var(--shadow-md);
+  z-index: 2;
+}
+
+/* تفاعل الأزرار */
+.btn:focus, .btn:active {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--color-primary)33;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background: color-mix(in srgb, var(--color-primary), #000 10%);
+  border-color: color-mix(in srgb, var(--color-primary), #000 10%);
+}
+
+.btn-outline:hover, .btn-outline:focus {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* toast-message */
+.toast-message {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-dark);
+  color: #fff;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 9999;
+}
+.toast-message.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* أيقونة النسخ */
+.copy-icon {
+  margin-right: var(--space-xs);
+  cursor: pointer;
+  color: var(--color-primary);
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+.copy-icon:hover {
+  color: var(--color-success);
+}
+
+/* الوضع المظلم */
+body.dark-theme, [data-theme="dark"] {
+  background: #181a1b;
+  color: #e0e0e0;
+}
+body.dark-theme .card, [data-theme="dark"] .card {
+  background: #23272b;
+  color: #e0e0e0;
+  box-shadow: var(--shadow-md);
+}
+body.dark-theme .btn-primary, [data-theme="dark"] .btn-primary {
+  background: #3A86FF;
+  border-color: #3A86FF;
+}
+body.dark-theme .btn-outline, [data-theme="dark"] .btn-outline {
+  color: #3A86FF;
+  border-color: #3A86FF;
+}
+body.dark-theme .btn-outline:hover, [data-theme="dark"] .btn-outline:hover {
+  background: #3A86FF;
+  color: #fff;
+}
+body.dark-theme .toast-message, [data-theme="dark"] .toast-message {
+  background: #23272b;
+  color: #fff;
+} 

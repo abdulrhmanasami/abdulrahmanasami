@@ -1,0 +1,291 @@
+total 18600
+-rw-r--r--   1 abdulrahman  staff   9.0M May 16 15:32 abdulrahmanasami10-1-2025.zip
+-rw-r--r--   1 abdulrahman  staff     0B May 26 01:41 all-files-list.txt
+drwxr-xr-x   6 abdulrahman  staff   192B May 26 01:38 assets
+-rw-r--r--   1 abdulrahman  staff    20B May 26 01:09 CNAME
+drwxr-xr-x   3 abdulrahman  staff    96B May 18 04:38 forms
+-rw-r--r--@  1 abdulrahman  staff    30K May 26 01:38 index.html
+drwx------@ 67 abdulrahman  staff   2.1K May 18 05:50 note
+-rw-r--r--   1 abdulrahman  staff    18B May 18 04:29 README.md
+-rw-r--r--   1 abdulrahman  staff   8.9K May 18 04:29 service-details.html
+-rw-r--r--   1 abdulrahman  staff    43K May 16 15:32 Updated_index.html
+
+./assets:
+total 0
+drwxr-xr-x   9 abdulrahman  staff   288B May 26 01:38 css
+drwxr-xr-x  15 abdulrahman  staff   480B May 16 15:32 img
+drwxr-xr-x   6 abdulrahman  staff   192B May 26 01:37 js
+drwxr-xr-x  13 abdulrahman  staff   416B May 16 15:33 vendor
+
+./assets/css:
+total 128
+-rw-r--r--  1 abdulrahman  staff   1.0K May 26 01:13 certifications.css
+-rw-r--r--  1 abdulrahman  staff   5.4K May 26 01:38 design-system.css
+-rw-r--r--  1 abdulrahman  staff    32K May 16 15:32 main.css
+-rw-r--r--  1 abdulrahman  staff   2.0K May 26 01:37 performance.css
+-rw-r--r--  1 abdulrahman  staff   1.3K May 26 01:13 resume.css
+-rw-r--r--  1 abdulrahman  staff   1.1K May 26 01:12 services.css
+-rw-r--r--  1 abdulrahman  staff   613B May 26 01:12 technical.css
+
+./assets/img:
+total 10816
+-rw-r--r--   1 abdulrahman  staff   2.3K May 16 15:32 apple-touch-icon.png
+-rw-r--r--   1 abdulrahman  staff    15K May 16 15:32 favicon.png
+-rw-r--r--   1 abdulrahman  staff   609K May 16 15:32 hero-bg-mobile.jpg
+-rw-r--r--   1 abdulrahman  staff   867K May 16 15:32 hero-bg.jpg
+-rw-r--r--   1 abdulrahman  staff   915K May 16 15:32 hero-bg1.jpg
+-rw-r--r--   1 abdulrahman  staff   871K May 16 15:32 hero-bg2.jpg
+-rw-r--r--   1 abdulrahman  staff   848K May 16 15:32 hero-bg3.jpg
+-rw-r--r--   1 abdulrahman  staff   678K May 16 15:32 hero-bg4.jpg
+drwxr-xr-x  11 abdulrahman  staff   352B May 16 15:32 masonry-portfolio
+drwxr-xr-x   6 abdulrahman  staff   192B May 16 15:32 portfolio
+-rw-r--r--   1 abdulrahman  staff   535K May 16 15:32 profile-img.jpg
+-rw-r--r--   1 abdulrahman  staff    53K May 16 15:32 services.jpg
+drwxr-xr-x   6 abdulrahman  staff   192B May 16 15:32 testimonials
+
+./assets/img/masonry-portfolio:
+total 824
+-rw-r--r--  1 abdulrahman  staff    25K May 16 15:32 masonry-portfolio-1.jpg
+-rw-r--r--  1 abdulrahman  staff   144K May 16 15:32 masonry-portfolio-2.jpg
+-rw-r--r--  1 abdulrahman  staff    19K May 16 15:32 masonry-portfolio-3.jpg
+-rw-r--r--  1 abdulrahman  staff    18K May 16 15:32 masonry-portfolio-4.jpg
+-rw-r--r--  1 abdulrahman  staff    21K May 16 15:32 masonry-portfolio-5.jpg
+-rw-r--r--  1 abdulrahman  staff    21K May 16 15:32 masonry-portfolio-6.jpg
+-rw-r--r--  1 abdulrahman  staff    94K May 16 15:32 masonry-portfolio-7.jpg
+-rw-r--r--  1 abdulrahman  staff    29K May 16 15:32 masonry-portfolio-8.jpg
+-rw-r--r--  1 abdulrahman  staff    23K May 16 15:32 masonry-portfolio-9.jpg
+
+./assets/img/portfolio:
+total 480
+-rw-r--r--  1 abdulrahman  staff    65K May 16 15:32 app-1.jpg
+-rw-r--r--  1 abdulrahman  staff    78K May 16 15:32 books-1.jpg
+-rw-r--r--  1 abdulrahman  staff    25K May 16 15:32 branding-1.jpg
+-rw-r--r--  1 abdulrahman  staff    61K May 16 15:32 product-1.jpg
+
+./assets/img/testimonials:
+total 2416
+-rw-r--r--  1 abdulrahman  staff   2.6K May 16 15:32 testimonials-1.jpg
+-rw-r--r--  1 abdulrahman  staff    14K May 16 15:32 testimonials-2.jpg
+-rw-r--r--  1 abdulrahman  staff    57K May 16 15:32 testimonials-3.jpg
+-rw-r--r--  1 abdulrahman  staff   1.1M May 16 15:32 testimonials-4.JPG
+
+./assets/js:
+total 48
+-rw-r--r--  1 abdulrahman  staff   5.3K May 26 01:37 design-system.js
+-rw-r--r--  1 abdulrahman  staff   270B May 26 01:12 filter.js
+-rw-r--r--  1 abdulrahman  staff   6.3K May 16 15:32 main.js
+-rw-r--r--  1 abdulrahman  staff   570B May 26 01:21 style-guide.js
+
+./assets/vendor:
+total 0
+drwxr-xr-x  7 abdulrahman  staff   224B May 16 15:32 aos
+drwxr-xr-x  4 abdulrahman  staff   128B May 16 15:33 bootstrap
+drwxr-xr-x  7 abdulrahman  staff   224B May 16 15:33 bootstrap-icons
+drwxr-xr-x  4 abdulrahman  staff   128B May 16 15:33 glightbox
+drwxr-xr-x  3 abdulrahman  staff    96B May 16 15:32 imagesloaded
+drwxr-xr-x  4 abdulrahman  staff   128B May 16 15:32 isotope-layout
+drwxr-xr-x  3 abdulrahman  staff    96B May 16 15:32 php-email-form
+drwxr-xr-x  4 abdulrahman  staff   128B May 16 15:32 purecounter
+drwxr-xr-x  5 abdulrahman  staff   160B May 16 15:32 swiper
+drwxr-xr-x@ 8 abdulrahman  staff   256B May 16 15:32 typed.js
+drwxr-xr-x  3 abdulrahman  staff    96B May 16 15:32 waypoints
+
+./assets/vendor/aos:
+total 288
+-rw-r--r--  1 abdulrahman  staff    19K May 16 15:32 aos.cjs.js
+-rw-r--r--  1 abdulrahman  staff    28K May 16 15:32 aos.css
+-rw-r--r--  1 abdulrahman  staff    19K May 16 15:32 aos.esm.js
+-rw-r--r--  1 abdulrahman  staff    13K May 16 15:32 aos.js
+-rw-r--r--  1 abdulrahman  staff    55K May 16 15:32 aos.js.map
+
+./assets/vendor/bootstrap:
+total 0
+drwxr-xr-x  35 abdulrahman  staff   1.1K May 16 15:33 css
+drwxr-xr-x  14 abdulrahman  staff   448B May 16 15:32 js
+
+./assets/vendor/bootstrap/css:
+total 12128
+-rw-r--r--  1 abdulrahman  staff    69K May 16 15:32 bootstrap-grid.css
+-rw-r--r--  1 abdulrahman  staff   198K May 16 15:32 bootstrap-grid.css.map
+-rw-r--r--  1 abdulrahman  staff    51K May 16 15:32 bootstrap-grid.min.css
+-rw-r--r--  1 abdulrahman  staff   113K May 16 15:32 bootstrap-grid.min.css.map
+-rw-r--r--  1 abdulrahman  staff    69K May 16 15:32 bootstrap-grid.rtl.css
+-rw-r--r--  1 abdulrahman  staff   198K May 16 15:32 bootstrap-grid.rtl.css.map
+-rw-r--r--  1 abdulrahman  staff    51K May 16 15:32 bootstrap-grid.rtl.min.css
+-rw-r--r--  1 abdulrahman  staff   113K May 16 15:32 bootstrap-grid.rtl.min.css.map
+-rw-r--r--  1 abdulrahman  staff    12K May 16 15:32 bootstrap-reboot.css
+-rw-r--r--  1 abdulrahman  staff   126K May 16 15:32 bootstrap-reboot.css.map
+-rw-r--r--  1 abdulrahman  staff   9.9K May 16 15:32 bootstrap-reboot.min.css
+-rw-r--r--  1 abdulrahman  staff    50K May 16 15:32 bootstrap-reboot.min.css.map
+-rw-r--r--  1 abdulrahman  staff    12K May 16 15:32 bootstrap-reboot.rtl.css
+-rw-r--r--  1 abdulrahman  staff   126K May 16 15:32 bootstrap-reboot.rtl.css.map
+-rw-r--r--  1 abdulrahman  staff    10K May 16 15:32 bootstrap-reboot.rtl.min.css
+-rw-r--r--  1 abdulrahman  staff    62K May 16 15:32 bootstrap-reboot.rtl.min.css.map
+-rw-r--r--  1 abdulrahman  staff   105K May 16 15:32 bootstrap-utilities.css
+-rw-r--r--  1 abdulrahman  staff   261K May 16 15:32 bootstrap-utilities.css.map
+-rw-r--r--  1 abdulrahman  staff    83K May 16 15:32 bootstrap-utilities.min.css
+-rw-r--r--  1 abdulrahman  staff   176K May 16 15:32 bootstrap-utilities.min.css.map
+-rw-r--r--  1 abdulrahman  staff   105K May 16 15:32 bootstrap-utilities.rtl.css
+-rw-r--r--  1 abdulrahman  staff   261K May 16 15:32 bootstrap-utilities.rtl.css.map
+-rw-r--r--  1 abdulrahman  staff    83K May 16 15:32 bootstrap-utilities.rtl.min.css
+-rw-r--r--  1 abdulrahman  staff   176K May 16 15:32 bootstrap-utilities.rtl.min.css.map
+-rw-r--r--  1 abdulrahman  staff   274K May 16 15:32 bootstrap.css
+-rw-r--r--  1 abdulrahman  staff   664K May 16 15:32 bootstrap.css.map
+-rw-r--r--  1 abdulrahman  staff   227K May 16 15:32 bootstrap.min.css
+-rw-r--r--  1 abdulrahman  staff   576K May 16 15:32 bootstrap.min.css.map
+-rw-r--r--  1 abdulrahman  staff   274K May 16 15:32 bootstrap.rtl.css
+-rw-r--r--  1 abdulrahman  staff   664K May 16 15:32 bootstrap.rtl.css.map
+-rw-r--r--  1 abdulrahman  staff   227K May 16 15:32 bootstrap.rtl.min.css
+-rw-r--r--  1 abdulrahman  staff   575K May 16 15:32 bootstrap.rtl.min.css.map
+-rw-r--r--  1 abdulrahman  staff     4B May 16 15:32 prb.txt
+
+./assets/vendor/bootstrap/js:
+total 5000
+-rw-r--r--  1 abdulrahman  staff   203K May 16 15:32 bootstrap.bundle.js
+-rw-r--r--  1 abdulrahman  staff   434K May 16 15:32 bootstrap.bundle.js.map
+-rw-r--r--  1 abdulrahman  staff    79K May 16 15:32 bootstrap.bundle.min.js
+-rw-r--r--  1 abdulrahman  staff   324K May 16 15:32 bootstrap.bundle.min.js.map
+-rw-r--r--  1 abdulrahman  staff   133K May 16 15:32 bootstrap.esm.js
+-rw-r--r--  1 abdulrahman  staff   298K May 16 15:32 bootstrap.esm.js.map
+-rw-r--r--  1 abdulrahman  staff    72K May 16 15:32 bootstrap.esm.min.js
+-rw-r--r--  1 abdulrahman  staff   217K May 16 15:32 bootstrap.esm.min.js.map
+-rw-r--r--  1 abdulrahman  staff   142K May 16 15:32 bootstrap.js
+-rw-r--r--  1 abdulrahman  staff   299K May 16 15:32 bootstrap.js.map
+-rw-r--r--  1 abdulrahman  staff    59K May 16 15:32 bootstrap.min.js
+-rw-r--r--  1 abdulrahman  staff   215K May 16 15:32 bootstrap.min.js.map
+
+./assets/vendor/bootstrap-icons:
+total 584
+-rw-r--r--  1 abdulrahman  staff    96K May 16 15:32 bootstrap-icons.css
+-rw-r--r--  1 abdulrahman  staff    51K May 16 15:32 bootstrap-icons.json
+-rw-r--r--  1 abdulrahman  staff    84K May 16 15:32 bootstrap-icons.min.css
+-rw-r--r--  1 abdulrahman  staff    56K May 16 15:32 bootstrap-icons.scss
+drwxr-xr-x  4 abdulrahman  staff   128B May 16 15:33 fonts
+
+./assets/vendor/bootstrap-icons/fonts:
+total 600
+-rw-r--r--  1 abdulrahman  staff   172K May 16 15:32 bootstrap-icons.woff
+-rw-r--r--  1 abdulrahman  staff   127K May 16 15:32 bootstrap-icons.woff2
+
+./assets/vendor/glightbox:
+total 0
+drwxr-xr-x  4 abdulrahman  staff   128B May 16 15:33 css
+drwxr-xr-x  4 abdulrahman  staff   128B May 16 15:33 js
+
+./assets/vendor/glightbox/css:
+total 72
+-rw-r--r--  1 abdulrahman  staff    17K May 16 15:32 glightbox.css
+-rw-r--r--  1 abdulrahman  staff    13K May 16 15:32 glightbox.min.css
+
+./assets/vendor/glightbox/js:
+total 328
+-rw-r--r--  1 abdulrahman  staff   107K May 16 15:32 glightbox.js
+-rw-r--r--  1 abdulrahman  staff    55K May 16 15:32 glightbox.min.js
+
+./assets/vendor/imagesloaded:
+total 16
+-rw-r--r--  1 abdulrahman  staff   5.4K May 16 15:32 imagesloaded.pkgd.min.js
+
+./assets/vendor/isotope-layout:
+total 256
+-rw-r--r--  1 abdulrahman  staff    89K May 16 15:32 isotope.pkgd.js
+-rw-r--r--  1 abdulrahman  staff    35K May 16 15:32 isotope.pkgd.min.js
+
+./assets/vendor/php-email-form:
+total 16
+-rw-r--r--  1 abdulrahman  staff   5.2K May 16 15:32 validate.js
+
+./assets/vendor/purecounter:
+total 80
+-rw-r--r--  1 abdulrahman  staff    11K May 16 15:32 purecounter_vanilla.js
+-rw-r--r--  1 abdulrahman  staff    24K May 16 15:32 purecounter_vanilla.js.map
+
+./assets/vendor/swiper:
+total 736
+-rw-r--r--  1 abdulrahman  staff    18K May 16 15:32 swiper-bundle.min.css
+-rw-r--r--  1 abdulrahman  staff   148K May 16 15:32 swiper-bundle.min.js
+-rw-r--r--  1 abdulrahman  staff   200K May 16 15:32 swiper-bundle.min.js.map
+
+./assets/vendor/typed.js:
+total 288
+-rw-r--r--  1 abdulrahman  staff   9.4K May 16 15:32 typed.cjs
+-rw-r--r--  1 abdulrahman  staff    35K May 16 15:32 typed.cjs.map
+-rw-r--r--  1 abdulrahman  staff   9.5K May 16 15:32 typed.module.js
+-rw-r--r--  1 abdulrahman  staff    35K May 16 15:32 typed.module.js.map
+-rw-r--r--  1 abdulrahman  staff   9.6K May 16 15:32 typed.umd.js
+-rw-r--r--  1 abdulrahman  staff    35K May 16 15:32 typed.umd.js.map
+
+./assets/vendor/waypoints:
+total 48
+-rw-r--r--  1 abdulrahman  staff    21K May 16 15:32 noframework.waypoints.js
+
+./forms:
+total 8
+-rw-r--r--  1 abdulrahman  staff   2.6K May 18 04:29 contact.php
+
+./note:
+total 143208
+-rwxr-xr-x@ 1 abdulrahman  staff   933K May 18 03:40 خطة عمل التطبيق.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   1.1M May 18 03:40 دوش مع فرشاية.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff    72K May 18 03:40 Note 1. Aug 2023 at 22_53_07.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   598K May 18 03:40 Note 1. Jul 2023 at 04_15_46.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   1.7M May 18 03:40 Note 10. Jan 2022 04_21_29.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   1.8M May 18 03:40 Note 11. May 2020 مشروع الشركة.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   724K May 18 03:40 Note 12. Jan 2022 05_15_34.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   442K May 18 03:40 Note 13. Mar 2020 فكرة تطبيق الحماية الشخصية.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   247K May 18 03:40 Note 13. Mar 2020 المساعد الشخصي.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   614K May 18 03:40 Note 14. Feb 2021 05_29_44.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   149K May 18 03:40 Note 14. Feb 2021 05_33_15.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff    25M May 18 03:40 Note 14. Jan 2024 at 23_13_20.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   790K May 18 03:40 Note 14. Mar 2020 فكرة تطبيق خدمات.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   763K May 18 03:40 Note 14. Mar 2020 وصيتي.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   209K May 18 03:40 Note 14. Mar 2022 05_37_12.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff    55K May 18 03:40 Note 16. Mar 2024 at 21_04_08.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff    44K May 18 03:40 Note 16. Mar 2024 at 21_04_53.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff    49K May 18 03:40 Note 16. Mar 2024 at 21_05_54.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff    41K May 18 03:40 Note 16. Mar 2024 at 21_08_28.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff    13K May 18 03:40 Note 16. Mar 2024 at 21_09_40.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   746K May 18 03:40 Note 17. Aug 2023 at 01_33_20.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   492K May 18 03:40 Note 17. Jul 2022 20_06_02.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   2.3M May 18 03:40 Note 17. Jun 2020 03_27_08.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff    13K May 18 03:40 Note 18. Feb 2022 22_44_14.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   157K May 18 03:40 Note 18. Jul 2020 03_49_46.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   873K May 18 03:40 Note 19. Apr 2021 03_40_46.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff    97K May 18 03:40 Note 19. Jul 2021 04_33_32.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff    94K May 18 03:40 Note 2. Aug 2023 at 19_05_31.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   522K May 18 03:40 Note 2. Jul 2020 17_21_53 ZackZack App.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   568K May 18 03:40 Note 2. Jul 2020 17_21_53.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff    76K May 18 03:40 Note 20. Apr 2020صندوق العيلة .pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   284K May 18 03:40 Note 20. Nov 2023 at 10_03_56.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   2.4M May 18 03:40 Note 21. Feb 2020 فكرة الشاورما .pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   3.0M May 18 03:40 Note 21. May 2020 تطبيق الورقة المشتركة .pdf
+-rwxr-xr-x@ 1 abdulrahman  staff    64K May 18 03:40 Note 22. Mar 2020 الدفتر الإلكتروني.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   104K May 18 03:40 Note 22. Sep 2021 09_20_53.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   6.4M May 18 03:40 Note 22. Sep 2021 14_11_53.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   366K May 18 03:40 Note 22. Sep 2021 14_18_05.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   672K May 18 03:40 Note 23. Jun 2020 فكرة قلم الإصبع.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   985K May 18 03:40 Note 23. Jun 2020 02_37_56.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   3.0M May 18 03:40 Note 24. Mar 2020 فكرة الإمتحان الإلكتروني.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   145K May 18 03:40 Note 25. Dec 2021 06_24_07.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   124K May 18 03:40 Note 26. Apr 2020افلام قصيرة .pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   164K May 18 03:40 Note 26. Apr 2022 22_44_24.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   603K May 18 03:40 Note 26. Jun 2020 فكرة تطبيق حلاقك لعندك عالبيت .pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   325K May 18 03:40 Note 26. Jun 2020 فكرة الحلاق.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff    83K May 18 03:40 Note 28. May 2020 04_00_58اختصارات من خلال القلم .pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   102K May 18 03:40 Note 28. May 2020 04_06_30فكرة مشروع إنتاج الدرون .pdf
+-rwxr-xr-x@ 1 abdulrahman  staff    73K May 18 03:40 Note 28. May 2020 04_14_54فكرة الاشارات .pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   349K May 18 03:40 Note 29. Mar 2022 02_21_43.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   1.2M May 18 03:40 Note 3. Apr 2022 04_10_55.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   377K May 18 03:40 Note 3. Jul 2022 15_34_04.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   793K May 18 03:40 Note 3. Jun 2020 03_42_38.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   1.2M May 18 03:40 Note 30. May 2020 03_01_13 Memo Voice.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff    14K May 18 03:40 Note 30. May 2023 at 13_47_31.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff    53K May 18 03:40 Note 6. Jul 2021 00_47_09.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff    75K May 18 03:40 Note 7. Jan 2022 03_13_48.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   635K May 18 03:40 Note 7. Jul 2022 14_38_04.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   3.5M May 18 03:40 Note 7. Nov 2021 21_16_58.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   286K May 18 03:40 Note 8. Apr 2021 04_59_52.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   340K May 18 03:40 Note 8. Apr 2021 05_00_47.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   186K May 18 03:40 Note 8. Apr 2021 05_18_28.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   985K May 18 03:40 Note 8. Apr 2021 05_21_08.pdf
+-rwxr-xr-x@ 1 abdulrahman  staff   185K May 18 03:40 Note 8. Feb 2022 22_32_33.pdf

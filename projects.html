@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projekte | Abdulrahman Asami</title>
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/design-system.css" rel="stylesheet">
+  <link href="assets/css/performance.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <style>
+    body { background: var(--color-light); }
+    .portfolio-filters { margin-bottom: var(--space-lg); text-align: center; }
+    .portfolio-filters .btn { margin: 0 var(--space-xs); outline: none; transition: box-shadow 0.2s, border-color 0.2s; }
+    .portfolio-filters .btn.active, .portfolio-filters .btn:focus, .portfolio-filters .btn:active {
+      background: var(--color-primary);
+      color: #fff;
+      border-color: var(--color-primary-dark);
+      box-shadow: 0 0 0 2px var(--color-primary-light);
+    }
+    .badge { background: var(--color-secondary); color: #fff; border-radius: var(--radius-sm); padding: 0.2em 0.7em; font-size: 0.9em; margin-bottom: var(--space-xs); display: inline-block; }
+    .portfolio-grid { margin-top: var(--space-md); }
+    .card {
+      transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s, opacity 0.4s;
+      opacity: 0;
+      transform: translateY(30px);
+      border: 1.5px solid var(--color-border);
+      background: #fff;
+    }
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.5s cubic-bezier(.4,0,.2,1), transform 0.5s cubic-bezier(.4,0,.2,1);
+    }
+    .card:focus-within, .card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      border-color: var(--color-primary);
+      transform: scale(1.025);
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <main class="main">
+    <section id="portfolio" class="portfolio section">
+      <div class="container">
+        <!-- Search Bar -->
+        <div class="portfolio-search" style="text-align:center; margin-bottom: var(--space-md);">
+          <input type="text" id="projectSearch" class="form-control" placeholder="Projekt suchen..." style="max-width: 400px; display:inline-block;" aria-label="Projekt suchen" />
+        </div>
+        <!-- Filter Bar -->
+        <div class="portfolio-filters" role="tablist" aria-label="Projektfilter">
+          <button class="btn btn-outline active" data-filter="*" role="tab" aria-selected="true" tabindex="0">Alle <span class="count"></span></button>
+          <button class="btn btn-outline" data-filter=".real" role="tab" aria-selected="false" tabindex="0">Reale Projekte <span class="count"></span></button>
+          <button class="btn btn-outline" data-filter=".innovative" role="tab" aria-selected="false" tabindex="0">Innovativ <span class="count"></span></button>
+          <button class="btn btn-outline" data-filter=".research" role="tab" aria-selected="false" tabindex="0">Forschung/Dokumentation <span class="count"></span></button>
+        </div>
+        <!-- Projects Grid -->
+        <div class="grid-system portfolio-grid">
+          <!-- Reale Projekte -->
+          <article class="card real" data-aos="fade-up">
+            <img src="assets/img/projects/foerderband.jpg" alt="Förderbandsystem" class="card-image" loading="lazy" />
+            <div class="card-body">
+              <h3 class="project-title">Förderbandsystem</h3>
+              <span class="badge">Reales Projekt</span>
+              <p class="project-summary">Entwicklung und Konstruktion eines automatisierten Förderbandsystems für die Industrie.</p>
+              <div class="project-meta">SolidWorks, CAD, Maschinenbau</div>
+              <a href="projects-foerderbandsystem.html" class="btn btn-primary">Details</a>
+            </div>
+          </article>
+          <article class="card real" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/projects/project1.jpg" alt="Gemeinsames Papier App" class="card-image" loading="lazy" />
+            <div class="card-body">
+              <h3 class="project-title">Gemeinsames Papier App</h3>
+              <span class="badge">Reales Projekt</span>
+              <p class="project-summary">Eine App zur Verwaltung und gemeinsamen Nutzung von Dokumenten für Schüler und Lehrer.</p>
+              <div class="project-meta">React, Firebase, UX/UI Design</div>
+              <a href="projects-gemeinsames-papier-app.html" class="btn btn-primary">Details</a>
+            </div>
+          </article>
+          <article class="card real" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/img/projects/project2.jpg" alt="Startup-Projekt" class="card-image" loading="lazy" />
+            <div class="card-body">
+              <h3 class="project-title">Startup-Projekt</h3>
+              <span class="badge">Reales Projekt</span>
+              <p class="project-summary">Prototyp für ein Tech-Startup im Bereich digitale Lösungen.</p>
+              <div class="project-meta">Figma, Webentwicklung, Geschäftsmodellierung</div>
+              <a href="projects-startup-projekt.html" class="btn btn-primary">Details</a>
+            </div>
+          </article>
+          <!-- Innovative Projekte -->
+          <article class="card innovative" data-aos="fade-up" data-aos-delay="300">
+            <img src="assets/img/projects/idea1.jpg" alt="Smart Finger Pen" class="card-image" loading="lazy" />
+            <div class="card-body">
+              <h3 class="project-title">Smart Finger Pen</h3>
+              <span class="badge">Innovativ</span>
+              <p class="project-summary">Eine innovative Idee für einen digitalen Stift, der direkt am Finger getragen wird.</p>
+              <a href="projects-smart-finger-pen.html" class="btn btn-outline">Details</a>
+            </div>
+          </article>
+          <article class="card innovative" data-aos="fade-up" data-aos-delay="400">
+            <img src="assets/img/projects/idea2.jpg" alt="Shawarma App" class="card-image" loading="lazy" />
+            <div class="card-body">
+              <h3 class="project-title">Shawarma App</h3>
+              <span class="badge">Innovativ</span>
+              <p class="project-summary">Eine smarte App zum Bestellen von Shawarma beim nächsten Restaurant.</p>
+              <a href="projects-shawarma-app.html" class="btn btn-outline">Details</a>
+            </div>
+          </article>
+          <!-- Forschung/Dokumentation -->
+          <article class="card research" data-aos="fade-up" data-aos-delay="500">
+            <img src="assets/img/projects/research1.jpg" alt="Marktanalyse EdTech" class="card-image" loading="lazy" />
+            <div class="card-body">
+              <h3 class="project-title">Marktanalyse EdTech</h3>
+              <span class="badge">Forschung</span>
+              <p class="project-summary">Vergleichsstudie von E-Learning-Apps in Deutschland.</p>
+              <a href="projects-marktanalyse-edtech.html" class="btn btn-outline" target="_blank">Details</a>
+            </div>
+          </article>
+          <article class="card research" data-aos="fade-up" data-aos-delay="600">
+            <img src="assets/img/projects/research2.jpg" alt="App Businessplan" class="card-image" loading="lazy" />
+            <div class="card-body">
+              <h3 class="project-title">App Businessplan</h3>
+              <span class="badge">Forschung</span>
+              <p class="project-summary">Detaillierter Businessplan für eine Aufgabenmanagement-App.</p>
+              <a href="projects-app-businessplan.html" class="btn btn-outline" target="_blank">Details</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/design-system.js"></script>
+  <script>
+    // Projektfilter & Suche
+    function updateFilterCounts() {
+      const filters = document.querySelectorAll('.portfolio-filters .btn');
+      const cards = document.querySelectorAll('.portfolio-grid .card');
+      filters.forEach(btn => {
+        const filter = btn.getAttribute('data-filter');
+        let count = 0;
+        cards.forEach(card => {
+          if (filter === '*' || card.classList.contains(filter.replace('.', ''))) count++;
+        });
+        btn.querySelector('.count').textContent = `(${count})`;
+      });
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.portfolio-filters .btn');
+      const cards = document.querySelectorAll('.portfolio-grid .card');
+      const searchInput = document.getElementById('projectSearch');
+      function filterCards() {
+        const activeBtn = document.querySelector('.portfolio-filters .btn.active');
+        const filter = activeBtn ? activeBtn.getAttribute('data-filter') : '*';
+        const search = searchInput.value.toLowerCase();
+        cards.forEach(card => {
+          const matchesFilter = (filter === '*' || card.classList.contains(filter.replace('.', '')));
+          const matchesSearch = card.textContent.toLowerCase().includes(search);
+          card.style.display = (matchesFilter && matchesSearch) ? '' : 'none';
+        });
+        updateFilterCounts();
+        animateCards();
+      }
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          filterCards();
+        });
+      });
+      searchInput.addEventListener('input', filterCards);
+      updateFilterCounts();
+      animateCards();
+    });
+    // Accessibility: Keyboard navigation for filters
+    filterButtons.forEach(btn => {
+      btn.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.click();
+        }
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          const next = this.nextElementSibling || filterButtons[0];
+          next.focus();
+        }
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          const prev = this.previousElementSibling || filterButtons[filterButtons.length-1];
+          prev.focus();
+        }
+      });
+    });
+    // Accessibility: Tabindex for cards
+    cards.forEach(card => { card.setAttribute('tabindex', '0'); });
+    // Animation: Fade-in cards on filter/search
+    function animateCards() {
+      const cards = document.querySelectorAll('.portfolio-grid .card');
+      let delay = 0;
+      cards.forEach(card => {
+        if (card.style.display !== 'none') {
+          card.classList.remove('visible');
+          setTimeout(() => { card.classList.add('visible'); }, delay);
+          delay += 100;
+        } else {
+          card.classList.remove('visible');
+        }
+      });
+    }
+  </script>
+</body>
+</html> 

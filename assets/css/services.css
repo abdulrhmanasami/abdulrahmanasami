@@ -1,0 +1,75 @@
+/* أنماط الخدمات التقنية */
+.service-card {
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+}
+
+.tech-specs {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tech-specs li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.technical-params {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.param {
+  text-align: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.param .value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: block;
+  color: #0d6efd;
+}
+
+.software-list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.software-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.file-types {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.file-types li {
+  padding: 0.3rem 0.8rem;
+  background: #e9ecef;
+  border-radius: 20px;
+  font-size: 0.9rem;
+} 

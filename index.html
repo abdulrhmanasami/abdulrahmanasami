@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de" dir="ltr">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>A s a m i</title>
-  <meta content="Abdulrahman Asami – Erfahren Sie mehr über einen engagierten Technischen Produktdesigner mit Spezialisierung auf Maschinen- und Anlagenkonstruktion. Entdecken Sie ein Portfolio voller innovativer Projekte und kreativer Lösungen." name="description">
-  <meta content="Abdulrahman Asami, Technischer Produktdesigner, Portfolio, Maschinenbau, Anlagenkonstruktion, SolidWorks, Projekte, Lebenslauf" name="keywords">
+  <title>Abdulrahman Asami | Technischer Produktdesigner</title>
+  <meta content="Portfolio von Abdulrahman Asami – Technischer Produktdesigner mit Spezialisierung auf Maschinenbau und innovative Projekte. Entdecken Sie reale Projekte, technische Lösungen und kreative Ideen." name="description">
+  <meta content="Abdulrahman Asami, Technischer Produktdesigner, Portfolio, Maschinenbau, Projekte, Innovation, Lebenslauf, CAD, SolidWorks" name="keywords">
   <meta name="author" content="Abdulrahman Asami">
+  <meta name="robots" content="index, follow">
+  <meta name="revisit-after" content="7 days">
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   
  <!-- Favicons -->
@@ -29,22 +31,49 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  </head>
+  <!-- Design System Files -->
+  <link href="assets/css/design-system.css" rel="stylesheet">
+  <link href="assets/css/performance.css" rel="stylesheet">
 
-<body class="index-page">
+  <!-- تحسين أداء التحميل -->
+  <link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <!-- إضافة تحسينات أداء في head -->
+  <link rel="preload" href="assets/css/design-system.css" as="style">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- تحويل الخطوط إلى woff2 -->
+  <style>
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/roboto.woff2') format('woff2');
+  }
+  </style>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/Person" class="index-page">
+
+  <!-- بيانات بنيوية -->
+  <meta itemprop="name" content="Abdulrahman Asami">
+  <meta itemprop="jobTitle" content="Technischer Produktdesigner">
 
   <header id="header" class="header d-flex flex-column justify-content-center">
 
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
-    <nav id="navmenu" class="navmenu">
-      <ul>
+    <nav id="navmenu" class="navmenu" aria-label="Main navigation">
+      <ul role="menubar">
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i><span>Über mich</span></a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Lebenslauf</span></a></li>
         <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+        <li><a href="projects.html"><i class="bi bi-folder2-open navicon"></i><span>Projekte</span></a></li>
+        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Dienstleistungen</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Kontakt</span></a></li>
       </ul>
     </nav>
 
@@ -53,7 +82,7 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
+    <section id="hero" role="region" aria-labelledby="heroHeading" class="hero section light-background">
       <picture>
       <source media="(max-width: 767px)" srcset="assets/img/hero-bg-mobile.jpg">
       <img src="assets/img/hero-bg.jpg" alt="Hero Background">
@@ -61,26 +90,21 @@
       <div class="container" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
           <div class="row justify-content-center">
               <div class="col-lg-13">
-                  <!-- الاسم -->
-                  <h2>Asami Abdulrahman</h2>
+                  <h1 id="heroHeading" itemprop="headline">Technische Innovation durch Präzision</h1>
   
-                  <!-- الوصف -->
-                    <p> 
-                      <span id="typed" class="typed"></span>
-                    </p>
-                    <script>
-                      document.addEventListener('DOMContentLoaded', function() {
-                        var typed = new Typed('#typed', {
-                          strings: ["Technischer Produktdesigner", "Produktentwickler", "CAD-Spezialist", "3D-Visualizer"],
-                          typeSpeed: 30,
-                          backSpeed: 15,
-                          backDelay: 500,
-                          loop: true
-                        });
+                  <p itemprop="description">3D-Konstruktion und mechanisches Design</p>
+                  <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                      var typed = new Typed('#typed', {
+                        strings: ["Technischer Produktdesigner", "Produktentwickler", "CAD-Spezialist", "3D-Visualizer"],
+                        typeSpeed: 30,
+                        backSpeed: 15,
+                        backDelay: 500,
+                        loop: true
                       });
-                    </script>
+                    });
+                  </script>
   
-                  <!-- روابط السوشيال ميديا -->
                   <div class="social-links">
                       <a href="https://x.com/AbdulRahMa14736" target="_blank" class="social-icon" data-aos="fade-right" data-aos-duration="500" data-aos-delay="500">
                           <i class="bi bi-twitter-x"></i>
@@ -113,7 +137,7 @@
       <div class="container">
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4" data-aos="fade-right" data-aos-delay="500">
-        <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+        <img src="assets/img/profile-img.jpg" class="img-fluid" alt="" loading="lazy">
           </div>
           <div class="col-lg-8 content" data-aos="fade-left" data-aos-delay="600">
         <h3><strong style="letter-spacing: 1px;">Abdulrahman Asami</strong></h3>
@@ -216,265 +240,144 @@
 
     <!-- Resume Section -->
 <section id="resume" class="resume section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-down">
-    <h2>Lebenslauf</h2>
-    <p>Ein Überblick über meine Ausbildung, beruflichen Erfahrungen und Fähigkeiten, die mich als technischer Produktdesigner auszeichnen.</p>
-  </div><!-- End Section Title -->
-
-  <div class="container">
-
-    <div class="row">
-
-      <div class="col-lg-6" data-aos="fade-right" data-aos-delay="300">
-
-        <h3 class="resume-title">Bildung</h3>
-        <div class="resume-item">
-          <h4>Technischer Produktdesigner (in Ausbildung)</h4>
-          <h5>2023 - Gegenwart</h5>
-          <p><em>Berufsförderungswerk Köln, Deutschland</em></p>
-          <p>Vertiefung in CAD-Software (SolidWorks) und technische Zeichnungen für die Maschinen- und Anlagenkonstruktion.</p>
-        </div><!-- End Resume Item -->
-
-        <div class="resume-item">
-          <h4>Integration und Sprachkurse</h4>
-          <h5>2015 - 2021</h5>
-          <p><em>Verschiedene Institute, Deutschland</em></p>
-          <p>Abschluss des Deutschkurses auf B2-Niveau und Teilnahme an berufsvorbereitenden Programmen.</p>
-        </div><!-- End Resume Item -->
-
-      </div>
-
-      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-        <h3 class="resume-title">Berufserfahrung</h3>
-        <div class="resume-item">
-          <h4>Technischer Produktdesigner (Praktikant)</h4>
-          <h5>Dezember 2023 - März 2024</h5>
-          <p><em>Droste Ingenieure GmbH, Deutschland</em></p>
-          <ul>
-            <li>Erstellung von CAD-Modellen und technischen Zeichnungen mit SolidWorks</li>
-            <li>Mitarbeit an Projekten in der Maschinen- und Anlagenkonstruktion</li>
-            <li>Vertiefung der technischen Kenntnisse durch praxisorientierte Ausbildung</li>
-          </ul>
-        </div><!-- End Resume Item -->
-
-        <div class="resume-item">
-          <h4>Verkaufsmitarbeiter</h4>
-          <h5>2019 - 2021</h5>
-          <p><em>ARAL Tankstelle, Hürth, Deutschland</em></p>
-          <ul>
-            <li>Kundenservice und tägliche Verwaltung von Verkaufsprozessen</li>
-            <li>Bestandsmanagement und Abwicklung von Kassentransaktionen</li>
-          </ul>
-        </div><!-- End Resume Item -->
-
-      </div>
-
-    </div>
-
+  <div class="container section-title">
+    <h2>Beruflicher Werdegang</h2>
+    <p>Technische Expertise und berufliche Entwicklung</p>
   </div>
 
-</section><!-- /Resume Section -->
+  <div class="container">
+    <div class="row">
+      
+      <!-- الخبرة العملية -->
+      <div class="col-lg-6">
+        <h3 class="resume-subtitle">Berufserfahrung</h3>
+        
+        <div class="resume-item">
+          <div class="resume-header">
+            <h4>Technischer Zeichner (Praktikum)</h4>
+            <div class="resume-meta">
+              <span class="company">Droste Ingenieure GmbH</span>
+              <span class="date">Dez. 2023 - März 2024</span>
+            </div>
+          </div>
+          <div class="resume-body">
+            <ul class="technical-skills">
+              <li>
+                <span class="skill">SolidWorks</span>
+                <div class="skill-level">
+                  <div class="level-bar" style="width: 85%"></div>
+                  <span class="level-text">Fortgeschritten</span>
+                </div>
+              </li>
+              <li>
+                <span class="skill">Technische Dokumentation</span>
+                <div class="skill-level">
+                  <div class="level-bar" style="width: 90%"></div>
+                  <span class="level-text">Experte</span>
+                </div>
+              </li>
+            </ul>
+            <div class="project-reference">
+              <h5>Referenzprojekt:</h5>
+              <p>Konstruktion einer automatisierten Förderanlage</p>
+              <a href="projekte/foerderanlage.html" class="btn-reference">
+                <i class="bi bi-folder2-open"></i>
+                Projektdetails
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- التعليم والتدريب -->
+      <div class="col-lg-6">
+        <h3 class="resume-subtitle">Ausbildung</h3>
+        
+        <div class="resume-item">
+          <div class="resume-header">
+            <h4>Technischer Produktdesigner</h4>
+            <div class="resume-meta">
+              <span class="institute">BFW Köln</span>
+              <span class="date">2023 - laufend</span>
+            </div>
+          </div>
+          <div class="resume-body">
+            <div class="curriculum">
+              <h5>Kernkompetenzen:</h5>
+              <ul class="competence-list">
+                <li>Maschinenbaugrundlagen</li>
+                <li>3D-CAD Konstruktion</li>
+                <li>Technische Kommunikation</li>
+              </ul>
+            </div>
+            <div class="certifications">
+              <h5>Zertifizierungen:</h5>
+              <div class="cert-badge">
+                <i class="bi bi-award-fill"></i>
+                <span>SolidWorks CSWA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Portfolio Section -->
 <section id="portfolio" class="portfolio section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Portfolio</h2>
-    <p>Eine Auswahl meiner bisherigen Projekte und Arbeiten im Bereich technisches Design und 3D-Visualisierung.</p>
-  </div><!-- End Section Title -->
-
-
   <div class="container">
+    <div class="grid-system">
+      
+      <!-- مشروع نموذجي -->
+      <article class="card">
+        <header class="card-header">
+          <h3 class="project-title">Förderbandsystem</h3>
+          <div class="meta">
+            <span class="badge">SolidWorks</span>
+            <span class="date">2024</span>
+          </div>
+        </header>
+        <div class="project-content">
+          <img src="assets/img/projects/conveyor.jpg" 
+               alt="Förderband 3D-Modell"
+               class="card-image">
+          <div class="card-actions">
+            <a href="#" class="btn btn-primary">
+              <i class="bi bi-zoom-in"></i>
+              Details
+            </a>
+            <a href="#" class="btn btn-outline">
+              <i class="bi bi-download"></i>
+              CAD-Datei
+            </a>
+          </div>
+        </div>
+      </article>
 
-    <div class="row gy-4 isotope-container" data-aos="fade-right" data-aos-delay="200">
-  
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Projekt 1</h4>
-          <p>3D-Modell</p>
-          <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="Projekt 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="portfolio-details.html" title="Mehr Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-        </div>
-      </div><!-- End Portfolio Item -->
-  
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Projekt 2</h4>
-          <p>Technisches Design</p>
-          <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Projekt 2" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="portfolio-details.html" title="Mehr Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-        </div>
-      </div><!-- End Portfolio Item -->
-  
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Projekt 3</h4>
-          <p>Webdesign</p>
-          <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Projekt 3" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="portfolio-details.html" title="Mehr Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-        </div>
-      </div><!-- End Portfolio Item -->
-  
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Projekt 4</h4>
-          <p>3D-Visualisierung</p>
-          <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="Projekt 4" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="portfolio-details.html" title="Mehr Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-        </div>
-      </div><!-- End Portfolio Item -->
-  
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Projekt 5</h4>
-          <p>Produktdesign</p>
-          <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Projekt 5" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="portfolio-details.html" title="Mehr Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-        </div>
-      </div><!-- End Portfolio Item -->
-  
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Projekt 6</h4>
-          <p>Branding</p>
-          <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Projekt 6" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="portfolio-details.html" title="Mehr Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-        </div>
-      </div><!-- End Portfolio Item -->
-  
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Projekt 7</h4>
-          <p>App-Design</p>
-          <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="Projekt 7" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="portfolio-details.html" title="Mehr Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-        </div>
-      </div><!-- End Portfolio Item -->
-  
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Projekt 8</h4>
-          <p>3D-Design</p>
-          <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Projekt 8" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="portfolio-details.html" title="Mehr Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-        </div>
-      </div><!-- End Portfolio Item -->
-  
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Projekt 9</h4>
-          <p>CAD-Design</p>
-          <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Projekt 9" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="portfolio-details.html" title="Mehr Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-        </div>
-      </div><!-- End Portfolio Item -->
-  
-    </div><!-- End Portfolio Container -->
-  
+      <!-- مشاريع إضافية بنفس النمط -->
+    </div>
   </div>
-  
+</section>
+
    <!-- Services Section -->
-<section id="services" class="services section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Dienstleistungen</h2>
-    <p>Entdecken Sie die Vielfalt der technischen und kreativen Dienstleistungen, die ich mit Leidenschaft und Präzision anbiete.</p>
-  </div><!-- End Section Title -->
-
+<section id="services" class="section">
   <div class="container">
-
-    <div class="row gy-4">
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-left" data-aos-delay="100">
-        <div class="service-item item-cyan position-relative">
-          <div class="icon">
-            <i class="bi bi-cube"></i>
-          </div>
-          <a href="#" class="stretched-link">
-            <h3>3D-Modellierung und Visualisierung</h3>
-          </a>
-          <p>Erstellung realistischer 3D-Modelle und Visualisierungen für technische und kreative Projekte.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-right" data-aos-delay="200">
-        <div class="service-item item-orange position-relative">
-          <div class="icon">
-            <i class="bi bi-pencil-ruler"></i>
-          </div>
-          <a href="#" class="stretched-link">
-            <h3>Technische Zeichnungen</h3>
-          </a>
-          <p>Erstellung präziser Zeichnungen für Maschinen- und Anlagenbau sowie Produktentwicklung.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-left" data-aos-delay="300">
-        <div class="service-item item-teal position-relative">
-          <div class="icon">
-            <i class="bi bi-lightbulb"></i>
-          </div>
-          <a href="#" class="stretched-link">
-            <h3>Produktentwicklung und Problemlösung</h3>
-          </a>
-          <p>Identifikation von Problemen und Entwicklung innovativer Lösungen zur Optimierung von Produkten und Prozessen.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-right" data-aos-delay="400">
-        <div class="service-item item-red position-relative">
-          <div class="icon">
-            <i class="bi bi-people"></i>
-          </div>
-          <a href="#" class="stretched-link">
-            <h3>CAD-Training und Beratung</h3>
-          </a>
-          <p>Individuelles Training und professionelle Beratung für die Nutzung von CAD-Software.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-left" data-aos-delay="500">
-        <div class="service-item item-indigo position-relative">
-          <div class="icon">
-            <i class="bi bi-gear"></i>
-          </div>
-          <a href="#" class="stretched-link">
-            <h3>Maschinen- und Anlagenkonstruktion</h3>
-          </a>
-          <p>Planung und Konstruktion von Maschinen und technischen Anlagen.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-right" data-aos-delay="600">
-        <div class="service-item item-pink position-relative">
-          <div class="icon">
-            <i class="bi bi-diagram-3"></i>
-          </div>
-          <a href="#" class="stretched-link">
-            <h3>Projektplanung und -Visualisierung</h3>
-          </a>
-          <p>Effiziente Planung und professionelle Visualisierung von Projekten jeder Art.</p>
-        </div>
-      </div><!-- End Service Item -->
+    <h2 class="section-title">Dienstleistungen</h2>
+    <div class="grid-system">
+      
+      <div class="card service-card">
+        <i class="bi bi-gear"></i>
+        <h3>Maschinenbau</h3>
+        <p>Industrielle Konstruktionen</p>
+        <a href="#" class="btn btn-primary">Mehr erfahren</a>
+      </div>
 
     </div>
-
   </div>
-
-</section><!-- /Services Section -->
+</section>
 
 
     <!-- Testimonials Section -->
@@ -507,10 +410,10 @@
       <div class="swiper-wrapper">
 
         <div class="swiper-slide">
-          <div class="testimonial-item">
+          <div class="card">
             <div class="row gy-4 justify-content-center">
               <div class="col-lg-6">
-                <div class="testimonial-content">
+                <div class="card-body">
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
                     <span>Abdulrahman ist ein äußerst engagierter und kreativer Student, der stets mit Leidenschaft an seine Projekte herangeht. Seine Fähigkeiten im Bereich 3D-Design sind beeindruckend.</span>
@@ -524,17 +427,17 @@
                 </div>
               </div>
               <div class="col-lg-2 text-center">
-                <img src="assets/img/testimonials/testimonials-x.jpg" class="img-fluid testimonial-img" alt="">
+                <img src="assets/img/testimonials/testimonials-x.jpg" class="img-fluid" alt="" loading="lazy">
               </div>
             </div>
           </div>
         </div><!-- End testimonial item -->
 
         <div class="swiper-slide">
-          <div class="testimonial-item">
+          <div class="card">
             <div class="row gy-4 justify-content-center">
               <div class="col-lg-6">
-                <div class="testimonial-content">
+                <div class="card-body">
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
                     <span>Er hat ein besonderes Talent für technische Zeichnungen und einen hohen Sinn für Genauigkeit. Seine Lernbereitschaft ist außergewöhnlich.</span>
@@ -548,17 +451,17 @@
                 </div>
               </div>
               <div class="col-lg-2 text-center">
-                <img src="assets/img/testimonials/testimonials-x.jpg" class="img-fluid testimonial-img" alt="">
+                <img src="assets/img/testimonials/testimonials-x.jpg" class="img-fluid" alt="" loading="lazy">
               </div>
             </div>
           </div>
         </div><!-- End testimonial item -->
 
         <div class="swiper-slide">
-          <div class="testimonial-item">
+          <div class="card">
             <div class="row gy-4 justify-content-center">
               <div class="col-lg-6">
-                <div class="testimonial-content">
+                <div class="card-body">
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
                     <span>Seine Projekte zeigen ein hohes Maß an Kreativität und technischer Kompetenz. Er ist ein wertvoller Beitrag zu jedem Team.</span>
@@ -572,17 +475,17 @@
                 </div>
               </div>
               <div class="col-lg-2 text-center">
-                <img src="assets/img/testimonials/testimonials-x.jpg" class="img-fluid testimonial-img" alt="">
+                <img src="assets/img/testimonials/testimonials-x.jpg" class="img-fluid" alt="" loading="lazy">
               </div>
             </div>
           </div>
         </div><!-- End testimonial item -->
 
         <div class="swiper-slide">
-          <div class="testimonial-item">
+          <div class="card">
             <div class="row gy-4 justify-content-center">
               <div class="col-lg-6">
-                <div class="testimonial-content">
+                <div class="card-body">
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
                     <span>Abdulrahman ist ein engagierter und zuverlässiger Kollege, der immer bereit ist, neue Herausforderungen anzunehmen und kreative Lösungen zu finden.</span>
@@ -596,7 +499,7 @@
                 </div>
               </div>
               <div class="col-lg-2 text-center">
-                <img src="assets/img/testimonials/testimonials-x.jpg" class="img-fluid testimonial-img" alt="">
+                <img src="assets/img/testimonials/testimonials-x.jpg" class="img-fluid" alt="" loading="lazy">
               </div>
             </div>
           </div>
@@ -689,6 +592,87 @@
 
 </section><!-- /Contact Section -->
 
+<!-- قسم الشهادات الجديد -->
+<section id="certifications" class="certifications section">
+  <div class="container section-title">
+    <h2>Digitale Zertifizierungen</h2>
+    <p>Verifizierbare Qualifikationen und technische Nachweise</p>
+  </div>
+
+  <div class="container">
+    <div class="grid-system">
+
+      <!-- شهادة SolidWorks -->
+      <div class="card">
+        <div class="card-header">
+          <img src="assets/img/cert-logos/solidworks-logo.png" 
+               alt="SolidWorks Zertifizierung"
+               class="cert-logo">
+          <div class="meta">
+            <span class="cert-id">ID: SW-2345-2024</span>
+            <span class="cert-date">Ausgestellt: 15.03.2024</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <h4>CSWA - Mechanical Design</h4>
+          <div class="cert-details">
+            <div class="detail-item">
+              <i class="bi bi-shield-check"></i>
+              <span>Verifiziert durch Dassault Systèmes</span>
+            </div>
+            <div class="detail-item">
+              <i class="bi bi-clock-history"></i>
+              <span>Gültig bis: 15.03.2027</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="certificates/sw-cswa.pdf" 
+               class="btn btn-outline"
+               target="_blank">
+              <i class="bi bi-file-pdf"></i>
+              PDF anzeigen
+            </a>
+            <a href="https://verify.solidworks.com" 
+               class="btn btn-primary"
+               target="_blank">
+              <i class="bi bi-patch-check"></i>
+              Verifizieren
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- المزيد من الشهادات بنفس النمط -->
+    </div>
+  </div>
+</section>
+
+<!-- توثيق تفاعلي لنظام التصميم -->
+<section id="style-guide" class="section style-guide">
+  <div class="container">
+    <h2 class="section-title">Style Guide</h2>
+    <div class="color-palette">
+      <div class="color-item" style="background: var(--color-primary)">Primary</div>
+      <div class="color-item" style="background: var(--color-secondary)">Secondary</div>
+    </div>
+    <div class="component-preview">
+      <button class="btn btn-primary">Primary Button</button>
+      <button class="btn btn-outline">Outline Button</button>
+      <div class="card">
+        <h3>Card Component</h3>
+        <p>Beispieltext für eine Karte</p>
+      </div>
+    </div>
+    <pre class="code-snippet">
+      <code>
+&lt;button class="btn btn-primary"&gt;
+  Primary Button
+&lt;/button&gt;
+      </code>
+    </pre>
+  </div>
+</section>
+
 </main>
 
 <footer id="footer" class="footer position-relative light-background">
@@ -730,6 +714,24 @@
 
 <!-- Main JS File -->
 <script src="assets/js/main.js"></script>
+
+<!-- Design System JS File -->
+<script src="assets/js/design-system.js"></script>
+
+<!-- إضافة بيانات بنيوية مفصلة -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Abdulrahman Asami",
+  "jobTitle": "Technischer Produktdesigner",
+  "url": "https://abdulrahmanasami.com",
+  "sameAs": [
+    "https://linkedin.com/in/abdulrahman-asami",
+    "https://x.com/AbdulRahMa14736"
+  ]
+}
+</script>
 
 </body>
 

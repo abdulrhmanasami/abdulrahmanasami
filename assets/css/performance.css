@@ -1,0 +1,109 @@
+/* تحسينات أداء للصور والمعاينة */
+.project-technical-data {
+  padding: var(--space-lg) 0;
+  background-color: var(--color-light);
+  border-radius: var(--radius-md);
+}
+
+.project-technical-data .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-technical-data h3 {
+  margin-bottom: var(--space-lg);
+  text-align: center;
+  color: var(--color-primary);
+  font-size: var(--h3);
+}
+
+.project-technical-data .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.project-technical-data .col-md-6 {
+  flex: 0 0 calc(50% - var(--space-md));
+  padding: var(--space-md);
+}
+
+/* تحسين البيانات التقنية */
+.tech-specs {
+  margin: 0;
+  background-color: var(--surface-color);
+  padding: var(--space-md);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.tech-specs dt {
+  font-weight: bold;
+  margin-bottom: var(--space-xs);
+  color: var(--color-primary);
+}
+
+.tech-specs dd {
+  margin-left: 0;
+  margin-bottom: var(--space-sm);
+  color: var(--color-secondary);
+}
+
+/* تحسين عرض نماذج ثلاثية الأبعاد */
+.cad-preview {
+  width: 100%;
+  height: 400px;
+  border: 1px solid #ddd;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.cad-preview iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* تحسينات تحميل الصور */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img[loading="lazy"] {
+  transition: opacity 0.3s ease;
+}
+
+/* تحسينات للشهادات */
+.cert-logo {
+  height: 40px;
+  width: auto;
+  margin-right: var(--space-sm);
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin: var(--space-xs) 0;
+  color: var(--color-secondary);
+}
+
+/* تحسينات تحميل الخط */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* تحسينات للهواتف المحمولة */
+@media (max-width: 768px) {
+  .project-technical-data .col-md-6 {
+    flex: 0 0 100%;
+  }
+  
+  .cad-preview {
+    height: 300px;
+  }
+} 
