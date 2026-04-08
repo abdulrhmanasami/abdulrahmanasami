@@ -1,733 +1,773 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de" dir="ltr">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>A s a m i</title>
-  <meta content="Abdulrahman Asami – Erfahren Sie mehr über einen engagierten Technischen Produktdesigner mit Spezialisierung auf Maschinen- und Anlagenkonstruktion. Entdecken Sie ein Portfolio voller innovativer Projekte und kreativer Lösungen." name="description">
-  <meta content="Abdulrahman Asami, Technischer Produktdesigner, Portfolio, Maschinenbau, Anlagenkonstruktion, SolidWorks, Projekte, Lebenslauf" name="keywords">
+  <title>Abdulrahman Asami | Technischer Produktdesigner & CAD-Spezialist</title>
+  <meta name="description" content="Portfolio von Abdulrahman Asami – Technischer Produktdesigner mit Spezialisierung auf SolidWorks, Blender, 3D-Konstruktion und innovative Produktentwicklung. Hürth, Deutschland.">
+  <meta name="keywords" content="Abdulrahman Asami, Technischer Produktdesigner, SolidWorks, Blender, CAD, Portfolio, Maschinenbau, BFW Köln, Hürth">
   <meta name="author" content="Abdulrahman Asami">
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  
- <!-- Favicons -->
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Abdulrahman Asami | Technischer Produktdesigner">
+  <meta property="og:description" content="CAD-Spezialist · 3D-Designer · Innovationsdenker">
+  <meta property="og:url" content="https://abdulrahmanasami.com">
+  <meta property="og:type" content="website">
+
+  <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
+  <!-- Google Fonts: Inter + Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Main Stylesheet -->
+  <link href="assets/css/portfolio-pro.css" rel="stylesheet">
 
-  </head>
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdulrahman Asami",
+    "jobTitle": "Technischer Produktdesigner",
+    "url": "https://abdulrahmanasami.com",
+    "email": "abdulrhman.asami@gmail.com",
+    "telephone": "+49 160-95793713",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Esserstraße 36",
+      "addressLocality": "Hürth",
+      "postalCode": "50354",
+      "addressCountry": "DE"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/abdulrahman-asami-3a7b462b3/",
+      "https://x.com/AbdulRahMa14736",
+      "https://www.instagram.com/asami.abdulrahman/"
+    ],
+    "knowsAbout": ["SolidWorks", "Blender", "Cinema 4D", "CAD", "3D-Design", "Maschinenbau"]
+  }
+  </script>
+</head>
 
-<body class="index-page">
+<body class="dark-mode" id="page-top">
 
-  <header id="header" class="header d-flex justify-content-center">
+  <!-- ═══════════════════════════════════════════════════════════
+       LOADER
+  ══════════════════════════════════════════════════════════════ -->
+  <div id="site-loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-rings">
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+      </div>
+      <span class="loader-initials">AA</span>
+    </div>
+  </div>
 
+  <!-- ═══════════════════════════════════════════════════════════
+       SIDEBAR NAVIGATION
+  ══════════════════════════════════════════════════════════════ -->
+  <nav id="sidebar" role="navigation" aria-label="Hauptnavigation">
+    <div class="sidebar-brand">
+      <span class="brand-initials">AA</span>
+      <span class="brand-name">Asami</span>
+    </div>
 
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <ul class="nav-links" role="menubar">
+      <li role="none"><a href="#hero" class="nav-link active" role="menuitem" data-section="hero">
+        <i class="bi bi-house-door"></i><span data-i18n="nav_home">Home</span>
+      </a></li>
+      <li role="none"><a href="#about" class="nav-link" role="menuitem" data-section="about">
+        <i class="bi bi-person-circle"></i><span data-i18n="nav_about">Über mich</span>
+      </a></li>
+      <li role="none"><a href="#skills" class="nav-link" role="menuitem" data-section="skills">
+        <i class="bi bi-cpu"></i><span data-i18n="nav_skills">Fähigkeiten</span>
+      </a></li>
+      <li role="none"><a href="#resume" class="nav-link" role="menuitem" data-section="resume">
+        <i class="bi bi-file-earmark-person"></i><span data-i18n="nav_resume">Lebenslauf</span>
+      </a></li>
+      <li role="none"><a href="#portfolio" class="nav-link" role="menuitem" data-section="portfolio">
+        <i class="bi bi-grid-3x3-gap"></i><span data-i18n="nav_portfolio">Portfolio</span>
+      </a></li>
+      <li role="none"><a href="#contact" class="nav-link" role="menuitem" data-section="contact">
+        <i class="bi bi-send"></i><span data-i18n="nav_contact">Kontakt</span>
+      </a></li>
+    </ul>
 
-  </header>
+    <div class="sidebar-actions">
+      <!-- Language switcher -->
+      <div class="lang-switcher" role="group" aria-label="Sprache">
+        <button class="lang-btn active" data-lang="de" title="Deutsch">DE</button>
+        <button class="lang-btn" data-lang="en" title="English">EN</button>
+        <button class="lang-btn" data-lang="ar" title="العربية">AR</button>
+      </div>
+      <!-- Dark/Light toggle -->
+      <button id="theme-toggle" class="theme-toggle" aria-label="Farbschema wechseln" title="Theme wechseln">
+        <i class="bi bi-moon-stars"></i>
+      </button>
+    </div>
 
-  <main class="main">
+    <!-- Mobile toggle -->
+    <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
-      <picture>
-      <source media="(max-width: 767px)" srcset="assets/img/hero-bg-mobile.jpg">
-      <img src="assets/img/hero-bg.jpg" alt="Hero Background">
-      </picture>
-      <div class="container" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-          <div class="row justify-content-center">
-              <div class="col-lg-13">
-                  <!-- الاسم -->
-                  <h2>Asami Abdulrahman</h2>
-  
-                  <!-- الوصف -->
-                    <p> 
-                      <span id="typed" class="typed"></span>
-                    </p>
-                    <script>
-                      document.addEventListener('DOMContentLoaded', function() {
-                        var typed = new Typed('#typed', {
-                          strings: ["Technischer Produktdesigner", "Produktentwickler", "CAD-Spezialist", "3D-Visualizer"],
-                          typeSpeed: 30,
-                          backSpeed: 15,
-                          backDelay: 500,
-                          loop: true
-                        });
-                      });
-                    </script>
-  
-                  <!-- روابط السوشيال ميديا -->
-                  <div class="social-links">
-                      <a href="https://x.com/AbdulRahMa14736" target="_blank" class="social-icon" data-aos="fade-right" data-aos-duration="500" data-aos-delay="500">
-                          <i class="bi bi-twitter-x"></i>
-                      </a>
-                      <a href="https://www.facebook.com/ZayTeen" target="_blank" class="social-icon" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1000">
-                          <i class="bi bi-facebook"></i>
-                      </a>
-                      <a href="https://www.instagram.com/asami.abdulrahman/" target="_blank" class="social-icon" data-aos="fade-down" data-aos-duration="500" data-aos-delay="1500">
-                          <i class="bi bi-instagram"></i>
-                      </a>
-                      <a href="https://www.linkedin.com/in/abdulrahman-asami-3a7b462b3/" target="_blank" class="social-icon" data-aos="fade-left" data-aos-duration="500" data-aos-delay="2000">
-                          <i class="bi bi-linkedin"></i>
-                      </a>
-                </div><!-- End Skills Item -->
-              </div>
-            </div>
-          </div>
-  </section><!-- /Hero Section -->
+  <!-- Mobile menu overlay -->
+  <div id="nav-overlay" class="nav-overlay" aria-hidden="true"></div>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
+  <!-- ═══════════════════════════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════════════════════════════ -->
+  <main id="main-content" class="main-content">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-down">
-        <h2>Über mich</h2>
-        <p>Technik. Planung. Durchsetzungskraft.</p>        
-      </div><!-- End Section Title -->
+    <!-- ─────────────────────────────── HERO ─────────────────────────────── -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-heading">
+      <!-- Animated mesh background -->
+      <div class="hero-bg" aria-hidden="true">
+        <div class="mesh-grid"></div>
+        <div class="glowing-orb orb-1"></div>
+        <div class="glowing-orb orb-2"></div>
+        <div class="glowing-orb orb-3"></div>
+      </div>
 
-      <div class="container">
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4" data-aos="fade-right" data-aos-delay="500">
-        <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 content" data-aos="fade-left" data-aos-delay="600">
-        <h3><strong style="letter-spacing: 1px;">Abdulrahman Asami</strong></h3>
-        <h5><em>Technischer Produktdesigner, Maschinen- und Anlagenkonstruktion</em></h5>
-        
-        <p class="fst-italic py-3"></p>
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="700">
-            <ul>
-          <li><i class="bi bi-chevron-right"></i> <strong>Geburtstag:</strong> <span>10. Dezember 1983</span></li>
-          <li><i class="bi bi-chevron-right"></i> <strong>Webseite:</strong> <span>abdulrahmanasami.com</span></li>
-          <li><i class="bi bi-chevron-right"></i> <strong>Telefon:</strong> <span>+49 160-95793713</span></li>
-          <li><i class="bi bi-chevron-right"></i> <strong>Stadt:</strong> <span>Hürth, Deutschland</span></li>
-            </ul>
-          </div>
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="800">
-            <ul>
-          <li><i class="bi bi-chevron-right"></i> <strong>Alter:</strong> <span>40</span></li>
-          <li><i class="bi bi-chevron-right"></i> <strong>Abschluss:</strong> <span>Zertifizierung als Technischer Produktdesigner (in Ausbildung)</span></li>
-          <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>abdulrhman.asami@gmail.com</span></li>
-          <li><i class="bi bi-chevron-right"></i> <strong>Freiberuflich:</strong> <span>Verfügbar</span></li>
-            </ul>
-          </div>
+      <div class="hero-content">
+        <div class="hero-badge" data-aos="fade-down">
+          <i class="bi bi-geo-alt"></i>
+          <span>Hürth, Deutschland</span>
         </div>
-        <p class="fst-italic py-3" data-aos="fade-up" data-aos-delay="900">
-          Während meiner Ausbildung am Berufsförderungswerk Köln habe ich gelernt, industrielle Designlösungen mit Tools wie SolidWorks zu entwickeln und kreatives Denken mit technischer Präzision zu verbinden.Mein Ziel ist es, innovative und praxisorientierte Produkte zu entwickeln, die einen positiven Einfluss auf die Industrie haben und effektive, nützliche Lösungen bieten, die den Marktbedürfnissen entsprechen.
+
+        <h1 id="hero-heading" data-aos="fade-up" data-aos-delay="100">
+          <span class="hero-greeting" data-i18n="hero_greeting">Hallo, ich bin</span>
+          <span class="hero-name">Abdulrahman Asami</span>
+        </h1>
+
+        <div class="hero-typewriter" data-aos="fade-up" data-aos-delay="200" aria-live="polite">
+          <span data-i18n="hero_role_prefix">Ich bin</span>
+          <span class="typed-text" id="typed-output"></span>
+          <span class="typed-cursor" aria-hidden="true">|</span>
+        </div>
+
+        <p class="hero-tagline" data-aos="fade-up" data-aos-delay="300" data-i18n="hero_tagline">
+          Technische Innovation durch Präzision — von der Idee zum 3D-Modell.
         </p>
-          </div>
+
+        <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+          <a href="#portfolio" class="btn-primary-cta" id="cta-portfolio">
+            <span data-i18n="cta_portfolio">Portfolio ansehen</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn-ghost-cta" id="cta-contact">
+            <i class="bi bi-envelope"></i>
+            <span data-i18n="cta_contact">Kontakt aufnehmen</span>
+          </a>
         </div>
-      </div></div>         
 
-    </section><!-- /About Section -->
-
-    </section><!-- /Stats Section -->
-
-   <!-- Skills Section -->
-<section id="skills" class="skills section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-down">
-    <h2>Fähigkeiten</h2>
-    <p>Erworbene technische und kreative Fähigkeiten, um innovative Lösungen zu entwickeln.</p>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-right" data-aos-delay="100">
-    <div class="row skills-content skills-animation">
-
-      <div class="col-lg-6">
-
-        <div class="progress" data-aos="fade-right" data-aos-delay="500">
-          <span class="skill">SolidWorks <i class="val">70%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
-          </div>
-        </div><!-- End Skills Item -->
-
-        <div class="progress" data-aos="fade-right" data-aos-delay="1500">
-          <span class="skill">Cinema 4D <i class="val">80%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
-          </div>
-        </div><!-- End Skills Item -->
-
-        <div class="progress" data-aos="fade-right" data-aos-delay="2000">
-          <span class="skill">Blender <i class="val">95%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
-          </div>
-        </div><!-- End Skills Item -->
-
+        <div class="hero-socials" data-aos="fade-up" data-aos-delay="500">
+          <a href="https://www.linkedin.com/in/abdulrahman-asami-3a7b462b3/" target="_blank" rel="noopener" class="social-pill" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://x.com/AbdulRahMa14736" target="_blank" rel="noopener" class="social-pill" aria-label="X / Twitter">
+            <i class="bi bi-twitter-x"></i> Twitter
+          </a>
+          <a href="https://www.instagram.com/asami.abdulrahman/" target="_blank" rel="noopener" class="social-pill" aria-label="Instagram">
+            <i class="bi bi-instagram"></i> Instagram
+          </a>
+        </div>
       </div>
 
-      <div class="col-lg-6">
+      <!-- Scroll indicator -->
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <div class="scroll-dot"></div>
+      </div>
+    </section>
 
-        <div class="progress" data-aos="fade-left" data-aos-delay="1000">
-          <span class="skill">Technisches Zeichnen <i class="val">75%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+    <!-- ────────────────────────────── ABOUT ─────────────────────────────── -->
+    <section id="about" class="section-container" aria-labelledby="about-heading">
+      <div class="section-inner">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag" data-i18n="about_tag">Wer ich bin</span>
+          <h2 id="about-heading" data-i18n="about_title">Über mich</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-visual" data-aos="fade-right">
+            <div class="profile-card">
+              <div class="profile-image-wrap">
+                <img src="assets/img/profile-img.jpg" alt="Abdulrahman Asami – Technischer Produktdesigner" class="profile-img" loading="lazy">
+                <div class="profile-ring" aria-hidden="true"></div>
+              </div>
+              <div class="profile-stats">
+                <div class="stat-item">
+                  <span class="stat-number">3+</span>
+                  <span class="stat-label" data-i18n="stat_years">Jahre Erfahrung</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">7+</span>
+                  <span class="stat-label" data-i18n="stat_projects">Projekte</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">95%</span>
+                  <span class="stat-label">Blender</span>
+                </div>
+              </div>
+            </div>
           </div>
-        </div><!-- End Skills Item -->
 
-        <div class="progress" data-aos="fade-left" data-aos-delay="1500">
-          <span class="skill">Projektvisualisierung <i class="val">88%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" style="width: 88%;"></div>
-          </div>
-        </div><!-- End Skills Item -->
+          <div class="about-content" data-aos="fade-left" data-aos-delay="100">
+            <h3 data-i18n="about_subtitle">Technischer Produktdesigner & 3D-Visualizer</h3>
+            <p data-i18n="about_bio">
+              Während meiner Ausbildung am Berufsförderungswerk Köln habe ich gelernt,
+              industrielle Designlösungen mit Tools wie SolidWorks zu entwickeln und
+              kreatives Denken mit technischer Präzision zu verbinden. Mein Ziel ist es,
+              innovative und praxisorientierte Produkte zu entwickeln, die einen positiven
+              Einfluss auf die Industrie haben.
+            </p>
 
-        <div class="progress" data-aos="fade-left" data-aos-delay="2000">
-          <span class="skill">Microsoft Office <i class="val">90%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+            <div class="about-info-grid">
+              <div class="info-item">
+                <span class="info-label"><i class="bi bi-person"></i> <span data-i18n="info_name">Name</span></span>
+                <span class="info-value">Abdulrahman Asami</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"><i class="bi bi-geo-alt"></i> <span data-i18n="info_city">Stadt</span></span>
+                <span class="info-value">Hürth, Deutschland</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"><i class="bi bi-telephone"></i> <span data-i18n="info_phone">Telefon</span></span>
+                <span class="info-value"><a href="tel:+4916095793713">+49 160-95793713</a></span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"><i class="bi bi-envelope"></i> <span data-i18n="info_email">Email</span></span>
+                <span class="info-value"><a href="mailto:abdulrhman.asami@gmail.com">abdulrhman.asami@gmail.com</a></span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"><i class="bi bi-mortarboard"></i> <span data-i18n="info_degree">Abschluss</span></span>
+                <span class="info-value" data-i18n="info_degree_val">Technischer Produktdesigner (in Ausbildung)</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"><i class="bi bi-check-circle"></i> <span data-i18n="info_freelance">Freelance</span></span>
+                <span class="info-value status-available" data-i18n="info_freelance_val">Verfügbar</span>
+              </div>
+            </div>
 
+            <a href="#" class="download-cv-btn" id="download-cv" aria-label="CV herunterladen">
+              <i class="bi bi-download"></i>
+              <span data-i18n="btn_download_cv">Lebenslauf herunterladen</span>
+            </a>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section><!-- /Skills Section -->
+    </section>
 
-    <!-- Resume Section -->
-<section id="resume" class="resume section">
+    <!-- ────────────────────────────── SKILLS ─────────────────────────────── -->
+    <section id="skills" class="section-container alt-bg" aria-labelledby="skills-heading">
+      <div class="section-inner">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag" data-i18n="skills_tag">Werkzeugkasten</span>
+          <h2 id="skills-heading" data-i18n="skills_title">Fähigkeiten</h2>
+          <div class="section-line"></div>
+        </div>
 
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-down">
-    <h2>Lebenslauf</h2>
-    <p>Ein Überblick über meine Ausbildung, beruflichen Erfahrungen und Fähigkeiten, die mich als technischer Produktdesigner auszeichnen.</p>
-  </div><!-- End Section Title -->
+        <div class="skills-grid">
+          <!-- 3D & CAD -->
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="0">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon"><i class="bi bi-boxes"></i></div>
+              <h3 data-i18n="skill_cat_3d">3D & CAD-Design</h3>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-bar-item" data-skill="SolidWorks" data-value="70">
+                <div class="skill-meta"><span>SolidWorks</span><span>70%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="70"></div></div>
+              </div>
+              <div class="skill-bar-item" data-skill="Blender" data-value="95">
+                <div class="skill-meta"><span>Blender</span><span>95%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="95"></div></div>
+              </div>
+              <div class="skill-bar-item" data-skill="Cinema 4D" data-value="80">
+                <div class="skill-meta"><span>Cinema 4D</span><span>80%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-bar-item" data-skill="Technisches Zeichnen" data-value="75">
+                <div class="skill-meta"><span data-i18n="skill_techzeich">Technisches Zeichnen</span><span>75%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="75"></div></div>
+              </div>
+            </div>
+          </div>
 
-  <div class="container">
+          <!-- Produktentwicklung -->
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon"><i class="bi bi-gear-wide-connected"></i></div>
+              <h3 data-i18n="skill_cat_prod">Produktentwicklung</h3>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-bar-item" data-value="88">
+                <div class="skill-meta"><span data-i18n="skill_viz">Projektvisualisierung</span><span>88%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="88"></div></div>
+              </div>
+              <div class="skill-bar-item" data-value="80">
+                <div class="skill-meta"><span data-i18n="skill_proto">Prototyping</span><span>80%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-bar-item" data-value="75">
+                <div class="skill-meta"><span>UX/UI Research</span><span>75%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="75"></div></div>
+              </div>
+              <div class="skill-bar-item" data-value="90">
+                <div class="skill-meta"><span>Microsoft Office</span><span>90%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <div class="row">
-
-      <div class="col-lg-6" data-aos="fade-right" data-aos-delay="300">
-
-        <h3 class="resume-title">Bildung</h3>
-        <div class="resume-item">
-          <h4>Technischer Produktdesigner (in Ausbildung)</h4>
-          <h5>2023 - Gegenwart</h5>
-          <p><em>Berufsförderungswerk Köln, Deutschland</em></p>
-          <p>Vertiefung in CAD-Software (SolidWorks) und technische Zeichnungen für die Maschinen- und Anlagenkonstruktion.</p>
-        </div><!-- End Resume Item -->
-
-        <div class="resume-item">
-          <h4>Integration und Sprachkurse</h4>
-          <h5>2015 - 2021</h5>
-          <p><em>Verschiedene Institute, Deutschland</em></p>
-          <p>Abschluss des Deutschkurses auf B2-Niveau und Teilnahme an berufsvorbereitenden Programmen.</p>
-        </div><!-- End Resume Item -->
-
+        <!-- Tech Tags -->
+        <div class="tech-tags-wrap" data-aos="fade-up" data-aos-delay="200">
+          <span class="tech-tag"><i class="bi bi-boxes"></i> SolidWorks</span>
+          <span class="tech-tag"><i class="bi bi-triangle"></i> Blender</span>
+          <span class="tech-tag"><i class="bi bi-camera-video"></i> Cinema 4D</span>
+          <span class="tech-tag"><i class="bi bi-rulers"></i> AutoCAD</span>
+          <span class="tech-tag"><i class="bi bi-pen"></i> Figma</span>
+          <span class="tech-tag"><i class="bi bi-filetype-doc"></i> Microsoft Office</span>
+          <span class="tech-tag"><i class="bi bi-layers"></i> CSWA Certified</span>
+        </div>
       </div>
+    </section>
 
-      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-        <h3 class="resume-title">Berufserfahrung</h3>
-        <div class="resume-item">
-          <h4>Technischer Produktdesigner (Praktikant)</h4>
-          <h5>Dezember 2023 - März 2024</h5>
-          <p><em>Droste Ingenieure GmbH, Deutschland</em></p>
-          <ul>
-            <li>Erstellung von CAD-Modellen und technischen Zeichnungen mit SolidWorks</li>
-            <li>Mitarbeit an Projekten in der Maschinen- und Anlagenkonstruktion</li>
-            <li>Vertiefung der technischen Kenntnisse durch praxisorientierte Ausbildung</li>
-          </ul>
-        </div><!-- End Resume Item -->
-
-        <div class="resume-item">
-          <h4>Verkaufsmitarbeiter</h4>
-          <h5>2019 - 2021</h5>
-          <p><em>ARAL Tankstelle, Hürth, Deutschland</em></p>
-          <ul>
-            <li>Kundenservice und tägliche Verwaltung von Verkaufsprozessen</li>
-            <li>Bestandsmanagement und Abwicklung von Kassentransaktionen</li>
-          </ul>
-        </div><!-- End Resume Item -->
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section><!-- /Resume Section -->
-
-    <!-- Portfolio Section -->
-<section id="portfolio" class="portfolio section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Portfolio</h2>
-    <p>Eine Auswahl meiner bisherigen Projekte und Arbeiten im Bereich technisches Design und 3D-Visualisierung.</p>
-  </div><!-- End Section Title -->
-
-
-  <div class="container">
-
-    <div class="row gy-4 isotope-container" data-aos="fade-right" data-aos-delay="200">
-  
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Projekt 1</h4>
-          <p>3D-Modell</p>
-          <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="Projekt 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="portfolio-details.html" title="Mehr Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+    <!-- ────────────────────────────── RESUME ─────────────────────────────── -->
+    <section id="resume" class="section-container" aria-labelledby="resume-heading">
+      <div class="section-inner">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag" data-i18n="resume_tag">Karriere</span>
+          <h2 id="resume-heading" data-i18n="resume_title">Beruflicher Werdegang</h2>
+          <div class="section-line"></div>
         </div>
-      </div><!-- End Portfolio Item -->
-  
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Projekt 2</h4>
-          <p>Technisches Design</p>
-          <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Projekt 2" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="portfolio-details.html" title="Mehr Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-        </div>
-      </div><!-- End Portfolio Item -->
-  
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Projekt 3</h4>
-          <p>Webdesign</p>
-          <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Projekt 3" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="portfolio-details.html" title="Mehr Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-        </div>
-      </div><!-- End Portfolio Item -->
-  
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Projekt 4</h4>
-          <p>3D-Visualisierung</p>
-          <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="Projekt 4" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="portfolio-details.html" title="Mehr Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-        </div>
-      </div><!-- End Portfolio Item -->
-  
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Projekt 5</h4>
-          <p>Produktdesign</p>
-          <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Projekt 5" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="portfolio-details.html" title="Mehr Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-        </div>
-      </div><!-- End Portfolio Item -->
-  
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Projekt 6</h4>
-          <p>Branding</p>
-          <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Projekt 6" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="portfolio-details.html" title="Mehr Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-        </div>
-      </div><!-- End Portfolio Item -->
-  
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Projekt 7</h4>
-          <p>App-Design</p>
-          <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="Projekt 7" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="portfolio-details.html" title="Mehr Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-        </div>
-      </div><!-- End Portfolio Item -->
-  
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Projekt 8</h4>
-          <p>3D-Design</p>
-          <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Projekt 8" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="portfolio-details.html" title="Mehr Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-        </div>
-      </div><!-- End Portfolio Item -->
-  
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-        <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Projekt 9</h4>
-          <p>CAD-Design</p>
-          <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Projekt 9" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          <a href="portfolio-details.html" title="Mehr Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-        </div>
-      </div><!-- End Portfolio Item -->
-  
-    </div><!-- End Portfolio Container -->
-  
-  </div>
-  
-   <!-- Services Section -->
-<section id="services" class="services section">
 
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Dienstleistungen</h2>
-    <p>Entdecken Sie die Vielfalt der technischen und kreativen Dienstleistungen, die ich mit Leidenschaft und Präzision anbiete.</p>
-  </div><!-- End Section Title -->
+        <div class="resume-grid">
+          <!-- Experience column -->
+          <div class="timeline-col" data-aos="fade-right">
+            <h3 class="timeline-col-title">
+              <i class="bi bi-briefcase"></i>
+              <span data-i18n="resume_exp">Berufserfahrung</span>
+            </h3>
 
-  <div class="container">
-
-    <div class="row gy-4">
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-left" data-aos-delay="100">
-        <div class="service-item item-cyan position-relative">
-          <div class="icon">
-            <i class="bi bi-cube"></i>
-          </div>
-          <a href="#" class="stretched-link">
-            <h3>3D-Modellierung und Visualisierung</h3>
-          </a>
-          <p>Erstellung realistischer 3D-Modelle und Visualisierungen für technische und kreative Projekte.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-right" data-aos-delay="200">
-        <div class="service-item item-orange position-relative">
-          <div class="icon">
-            <i class="bi bi-pencil-ruler"></i>
-          </div>
-          <a href="#" class="stretched-link">
-            <h3>Technische Zeichnungen</h3>
-          </a>
-          <p>Erstellung präziser Zeichnungen für Maschinen- und Anlagenbau sowie Produktentwicklung.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-left" data-aos-delay="300">
-        <div class="service-item item-teal position-relative">
-          <div class="icon">
-            <i class="bi bi-lightbulb"></i>
-          </div>
-          <a href="#" class="stretched-link">
-            <h3>Produktentwicklung und Problemlösung</h3>
-          </a>
-          <p>Identifikation von Problemen und Entwicklung innovativer Lösungen zur Optimierung von Produkten und Prozessen.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-right" data-aos-delay="400">
-        <div class="service-item item-red position-relative">
-          <div class="icon">
-            <i class="bi bi-people"></i>
-          </div>
-          <a href="#" class="stretched-link">
-            <h3>CAD-Training und Beratung</h3>
-          </a>
-          <p>Individuelles Training und professionelle Beratung für die Nutzung von CAD-Software.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-left" data-aos-delay="500">
-        <div class="service-item item-indigo position-relative">
-          <div class="icon">
-            <i class="bi bi-gear"></i>
-          </div>
-          <a href="#" class="stretched-link">
-            <h3>Maschinen- und Anlagenkonstruktion</h3>
-          </a>
-          <p>Planung und Konstruktion von Maschinen und technischen Anlagen.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-right" data-aos-delay="600">
-        <div class="service-item item-pink position-relative">
-          <div class="icon">
-            <i class="bi bi-diagram-3"></i>
-          </div>
-          <a href="#" class="stretched-link">
-            <h3>Projektplanung und -Visualisierung</h3>
-          </a>
-          <p>Effiziente Planung und professionelle Visualisierung von Projekten jeder Art.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-    </div>
-
-  </div>
-
-</section><!-- /Services Section -->
-
-
-    <!-- Testimonials Section -->
-<section id="testimonials" class="testimonials section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-down">
-    <h2>Meinungen</h2>
-    <p>Einblicke von meinen Lehrern, Kollegen und Mentoren über meine Fähigkeiten und Leistungen.</p>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-right" data-aos-delay="100">
-
-    <div class="swiper init-swiper">
-      <script type="application/json" class="swiper-config">
-        {
-          "loop": true,
-          "speed": 600,
-          "autoplay": {
-            "delay": 5000
-          },
-          "slidesPerView": "auto",
-          "pagination": {
-            "el": ".swiper-pagination",
-            "type": "bullets",
-            "clickable": true
-          }
-        }
-      </script>
-      <div class="swiper-wrapper">
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <div class="row gy-4 justify-content-center">
-              <div class="col-lg-6">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Abdulrahman ist ein äußerst engagierter und kreativer Student, der stets mit Leidenschaft an seine Projekte herangeht. Seine Fähigkeiten im Bereich 3D-Design sind beeindruckend.
-</span>
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <h3>Herr xxx</h3>
-                  <h4>Technischer Ausbilder</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card glass-card">
+                  <div class="tl-header">
+                    <h4 data-i18n="job1_title">Technischer Zeichner (Praktikum)</h4>
+                    <span class="tl-date"><i class="bi bi-calendar3"></i> Dez. 2023 – März 2024</span>
+                  </div>
+                  <span class="tl-company">
+                    <i class="bi bi-building"></i> Droste Ingenieure GmbH
+                  </span>
+                  <ul class="tl-details">
+                    <li data-i18n="job1_detail1">3D-Konstruktion mit SolidWorks auf Fortgeschrittenen-Niveau</li>
+                    <li data-i18n="job1_detail2">Erstellung technischer Zeichnungen und Dokumentationen</li>
+                    <li data-i18n="job1_detail3">Mitarbeit am Referenzprojekt: Automatisierte Förderanlage</li>
+                  </ul>
+                  <div class="tl-tags">
+                    <span>SolidWorks</span>
+                    <span data-i18n="tag_tech_doc">Technische Doku</span>
+                    <span data-i18n="tag_machine">Maschinenbau</span>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-2 text-center">
-                <img src="assets/img/testimonials/testimonials-x.jpg" class="img-fluid testimonial-img" alt="">
+            </div>
+
+            <!-- Certifications block -->
+            <h3 class="timeline-col-title" style="margin-top: 2.5rem;">
+              <i class="bi bi-award"></i>
+              <span data-i18n="resume_certs">Zertifizierungen</span>
+            </h3>
+            <div class="cert-cards">
+              <div class="cert-card glass-card">
+                <div class="cert-icon"><i class="bi bi-shield-check"></i></div>
+                <div class="cert-info">
+                  <strong>CSWA – Mechanical Design</strong>
+                  <span data-i18n="cert_by">Zertifiziert durch Dassault Systèmes</span>
+                  <span class="cert-id">ID: SW-2345-2024</span>
+                </div>
               </div>
             </div>
           </div>
-        </div><!-- End testimonial item -->
 
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <div class="row gy-4 justify-content-center">
-              <div class="col-lg-6">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Er hat ein besonderes Talent für technische Zeichnungen und einen hohen Sinn für Genauigkeit. Seine Lernbereitschaft ist außergewöhnlich.
-</span>
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <h3>Herr xxx</h3>
-                  <h4>Technischer Ausbilder</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          <!-- Education column -->
+          <div class="timeline-col" data-aos="fade-left" data-aos-delay="100">
+            <h3 class="timeline-col-title">
+              <i class="bi bi-mortarboard"></i>
+              <span data-i18n="resume_edu">Ausbildung</span>
+            </h3>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card glass-card">
+                  <div class="tl-header">
+                    <h4 data-i18n="edu1_title">Technischer Produktdesigner</h4>
+                    <span class="tl-date"><i class="bi bi-calendar3"></i> 2023 – laufend</span>
+                  </div>
+                  <span class="tl-company">
+                    <i class="bi bi-building"></i> BFW Köln (Berufsförderungswerk)
+                  </span>
+                  <ul class="tl-details">
+                    <li data-i18n="edu1_detail1">Maschinenbaugrundlagen & Fertigungstechnik</li>
+                    <li data-i18n="edu1_detail2">3D-CAD Konstruktion (SolidWorks, Blender)</li>
+                    <li data-i18n="edu1_detail3">Technische Kommunikation & Dokumentation</li>
+                    <li data-i18n="edu1_detail4">Werkstoffkunde & Produktionsplanung</li>
+                  </ul>
+                  <div class="tl-tags">
+                    <span>SolidWorks</span>
+                    <span>CAD</span>
+                    <span data-i18n="tag_machine">Maschinenbau</span>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-2 text-center">
-                <img src="assets/img/testimonials/testimonials-x.jpg" class="img-fluid testimonial-img" alt="">
-              </div>
-            </div>
-          </div>
-        </div><!-- End testimonial item -->
 
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <div class="row gy-4 justify-content-center">
-              <div class="col-lg-6">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Seine Projekte zeigen ein hohes Maß an Kreativität und technischer Kompetenz. Er ist ein wertvoller Beitrag zu jedem Team.
-                    <i class="bi bi-quote quote-icon-right"></i></span>
-                  </p>
-                  <h3>Herr xxx</h3>
-                  <h4>Bewerbungscoach, Bewerbungsunterlagen, JobTrain, Vermittlung/Arbeitsstellen</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card glass-card">
+                  <div class="tl-header">
+                    <h4 data-i18n="edu2_title">Allgemeine & technische Vorbildung</h4>
+                    <span class="tl-date"><i class="bi bi-calendar3"></i> 2003 – 2023</span>
                   </div>
+                  <span class="tl-company">
+                    <i class="bi bi-globe"></i> Syrien / Deutschland
+                  </span>
+                  <ul class="tl-details">
+                    <li data-i18n="edu2_detail1">Technische und kreative Selbstausbildung (Blender, Cinema 4D)</li>
+                    <li data-i18n="edu2_detail2">Deutsch als Zweitsprache (integrationskurs)</li>
+                  </ul>
                 </div>
               </div>
-              <div class="col-lg-2 text-center">
-                <img src="assets/img/testimonials/testimonials-x.jpg" class="img-fluid testimonial-img" alt="">
-              </div>
             </div>
           </div>
-        </div><!-- End testimonial item -->
+        </div>
+      </div>
+    </section>
 
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <div class="row gy-4 justify-content-center">
-              <div class="col-lg-6">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Abdulrahman ist ein engagierter und zuverlässiger Kollege, der immer bereit ist, neue Herausforderungen anzunehmen und kreative Lösungen zu finden.</span>
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <h3>Herr xxx</h3>
-                  <h4>Kollege</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  </div>
+    <!-- ────────────────────────────── PORTFOLIO ──────────────────────────── -->
+    <section id="portfolio" class="section-container alt-bg" aria-labelledby="portfolio-heading">
+      <div class="section-inner">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag" data-i18n="portfolio_tag">Meine Arbeit</span>
+          <h2 id="portfolio-heading" data-i18n="portfolio_title">Portfolio</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <!-- Filters -->
+        <div class="portfolio-filters" data-aos="fade-up" data-aos-delay="100" role="group" aria-label="Portfolio Filter">
+          <button class="filter-btn active" data-filter="all" id="filter-all">
+            <span data-i18n="filter_all">Alle</span>
+          </button>
+          <button class="filter-btn" data-filter="real" id="filter-real">
+            <span data-i18n="filter_real">Reale Projekte</span>
+          </button>
+          <button class="filter-btn" data-filter="innovative" id="filter-innovative">
+            <span data-i18n="filter_innovative">Innovativ</span>
+          </button>
+          <button class="filter-btn" data-filter="research" id="filter-research">
+            <span data-i18n="filter_research">Forschung</span>
+          </button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid" data-aos="fade-up" data-aos-delay="200">
+
+          <!-- Project 1: Förderbandsystem -->
+          <article class="project-card" data-category="real" tabindex="0">
+            <div class="project-img-wrap">
+              <img src="assets/img/projects/foerderband.jpg"
+                   onerror="this.src='assets/img/project-placeholder.svg'; this.onerror=null;"
+                   alt="Förderbandsystem 3D-Modell" loading="lazy">
+              <div class="project-overlay">
+                <a href="projects-foerderbandsystem.html" class="overlay-btn" aria-label="Förderbandsystem Details">
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-cat-badge cat-real" data-i18n="filter_real">Reales Projekt</div>
+              <h3>Förderbandsystem</h3>
+              <p data-i18n="proj1_desc">Entwicklung und Konstruktion eines automatisierten Förderbandsystems für die Industrie.</p>
+              <div class="project-tags">
+                <span>SolidWorks</span><span>CAD</span><span data-i18n="tag_machine">Maschinenbau</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Gemeinsames Papier App -->
+          <article class="project-card" data-category="real" tabindex="0">
+            <div class="project-img-wrap">
+              <img src="assets/img/projects/project1.jpg"
+                   onerror="this.src='assets/img/project-placeholder.svg'; this.onerror=null;"
+                   alt="Gemeinsames Papier App" loading="lazy">
+              <div class="project-overlay">
+                <a href="projects-gemeinsames-papier-app.html" class="overlay-btn" aria-label="App Details">
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-cat-badge cat-real" data-i18n="filter_real">Reales Projekt</div>
+              <h3>Gemeinsames Papier App</h3>
+              <p data-i18n="proj2_desc">App zur gemeinsamen Nutzung von Dokumenten für Schüler und Lehrer.</p>
+              <div class="project-tags">
+                <span>React</span><span>Firebase</span><span>UX Design</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Startup -->
+          <article class="project-card" data-category="real" tabindex="0">
+            <div class="project-img-wrap">
+              <img src="assets/img/projects/project2.jpg"
+                   onerror="this.src='assets/img/project-placeholder.svg'; this.onerror=null;"
+                   alt="Startup-Projekt" loading="lazy">
+              <div class="project-overlay">
+                <a href="projects-startup-projekt.html" class="overlay-btn" aria-label="Startup Details">
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-cat-badge cat-real" data-i18n="filter_real">Reales Projekt</div>
+              <h3>Startup-Projekt</h3>
+              <p data-i18n="proj3_desc">Prototyp für ein Tech-Startup im Bereich digitale Lösungen.</p>
+              <div class="project-tags">
+                <span>Figma</span><span data-i18n="tag_web">Webentwicklung</span><span data-i18n="tag_biz">Business</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Smart Finger Pen -->
+          <article class="project-card" data-category="innovative" tabindex="0">
+            <div class="project-img-wrap">
+              <img src="assets/img/projects/idea1.jpg"
+                   onerror="this.src='assets/img/project-placeholder.svg'; this.onerror=null;"
+                   alt="Smart Finger Pen Konzept" loading="lazy">
+              <div class="project-overlay">
+                <a href="projects-smart-finger-pen.html" class="overlay-btn" aria-label="Smart Finger Pen Details">
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-cat-badge cat-innovative" data-i18n="filter_innovative">Innovativ</div>
+              <h3>Smart Finger Pen</h3>
+              <p data-i18n="proj4_desc">Innovativer digitaler Stift, der direkt am Finger getragen wird – Konzept & Produktstudie.</p>
+              <div class="project-tags">
+                <span data-i18n="tag_concept">Konzept</span><span data-i18n="tag_prod_design">Produktdesign</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Shawarma App -->
+          <article class="project-card" data-category="innovative" tabindex="0">
+            <div class="project-img-wrap">
+              <img src="assets/img/projects/idea2.jpg"
+                   onerror="this.src='assets/img/project-placeholder.svg'; this.onerror=null;"
+                   alt="Shawarma App Konzept" loading="lazy">
+              <div class="project-overlay">
+                <a href="projects-shawarma-app.html" class="overlay-btn" aria-label="Shawarma App Details">
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-cat-badge cat-innovative" data-i18n="filter_innovative">Innovativ</div>
+              <h3>Shawarma App</h3>
+              <p data-i18n="proj5_desc">Smarte App zum Bestellen von Shawarma beim nächsten Restaurant — UX-Studie.</p>
+              <div class="project-tags">
+                <span>App Design</span><span>UX</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Marktanalyse EdTech -->
+          <article class="project-card" data-category="research" tabindex="0">
+            <div class="project-img-wrap">
+              <img src="assets/img/projects/research1.jpg"
+                   onerror="this.src='assets/img/project-placeholder.svg'; this.onerror=null;"
+                   alt="Marktanalyse EdTech" loading="lazy">
+              <div class="project-overlay">
+                <a href="projects-marktanalyse-edtech.html" class="overlay-btn" aria-label="EdTech Analyse Details">
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-cat-badge cat-research" data-i18n="filter_research">Forschung</div>
+              <h3>Marktanalyse EdTech</h3>
+              <p data-i18n="proj6_desc">Vergleichsstudie von E-Learning-Apps auf dem deutschen Markt.</p>
+              <div class="project-tags">
+                <span data-i18n="tag_research">Marktforschung</span><span>EdTech</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 7: App Businessplan -->
+          <article class="project-card" data-category="research" tabindex="0">
+            <div class="project-img-wrap">
+              <img src="assets/img/projects/research2.jpg"
+                   onerror="this.src='assets/img/project-placeholder.svg'; this.onerror=null;"
+                   alt="App Businessplan" loading="lazy">
+              <div class="project-overlay">
+                <a href="projects-app-businessplan.html" class="overlay-btn" aria-label="Businessplan Details">
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-cat-badge cat-research" data-i18n="filter_research">Forschung</div>
+              <h3>App Businessplan</h3>
+              <p data-i18n="proj7_desc">Detaillierter Businessplan für eine Aufgabenmanagement-App.</p>
+              <div class="project-tags">
+                <span data-i18n="tag_biz">Business</span><span data-i18n="tag_planning">Planung</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────── CONTACT ────────────────────────────── -->
+    <section id="contact" class="section-container" aria-labelledby="contact-heading">
+      <div class="section-inner">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag" data-i18n="contact_tag">Zusammenarbeit</span>
+          <h2 id="contact-heading" data-i18n="contact_title">Kontakt</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Info cards -->
+          <div class="contact-info" data-aos="fade-right">
+            <p class="contact-intro" data-i18n="contact_intro">
+              Haben Sie ein Projekt oder eine Idee? Ich freue mich auf Ihre Nachricht!
+            </p>
+
+            <div class="contact-cards">
+              <div class="contact-card glass-card">
+                <div class="cc-icon"><i class="bi bi-geo-alt"></i></div>
+                <div class="cc-body">
+                  <strong data-i18n="info_city">Adresse</strong>
+                  <span>Esserstraße 36, 50354 Hürth, Deutschland</span>
                 </div>
               </div>
-              <div class="col-lg-2 text-center">
-                <img src="assets/img/testimonials/testimonials-x.jpg" class="img-fluid testimonial-img" alt="">
+              <div class="contact-card glass-card">
+                <div class="cc-icon"><i class="bi bi-telephone"></i></div>
+                <div class="cc-body">
+                  <strong data-i18n="info_phone">Telefon</strong>
+                  <span><a href="tel:+4916095793713">+49 160-95793713</a></span>
+                </div>
+              </div>
+              <div class="contact-card glass-card">
+                <div class="cc-icon"><i class="bi bi-envelope"></i></div>
+                <div class="cc-body">
+                  <strong>Email</strong>
+                  <span><a href="mailto:abdulrhman.asami@gmail.com">abdulrhman.asami@gmail.com</a></span>
+                </div>
+              </div>
+              <div class="contact-card glass-card">
+                <div class="cc-icon"><i class="bi bi-linkedin"></i></div>
+                <div class="cc-body">
+                  <strong>LinkedIn</strong>
+                  <span><a href="https://www.linkedin.com/in/abdulrahman-asami-3a7b462b3/" target="_blank" rel="noopener">Profil ansehen</a></span>
+                </div>
               </div>
             </div>
           </div>
-        </div><!-- End testimonial item -->
 
+          <!-- Contact Form -->
+          <div class="contact-form-wrap" data-aos="fade-left" data-aos-delay="100">
+            <form class="contact-form glass-card" id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="cf-name" data-i18n="form_name">Ihr Name</label>
+                  <input type="text" id="cf-name" name="name" required autocomplete="name"
+                         placeholder="Abdulrahman Asami" aria-required="true">
+                  <span class="form-error" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                  <label for="cf-email">Email</label>
+                  <input type="email" id="cf-email" name="email" required autocomplete="email"
+                         placeholder="name@example.com" aria-required="true">
+                  <span class="form-error" aria-live="polite"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="cf-subject" data-i18n="form_subject">Betreff</label>
+                <input type="text" id="cf-subject" name="subject" required
+                       placeholder="Ihr Betreff" aria-required="true">
+                <span class="form-error" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="cf-message" data-i18n="form_message">Nachricht</label>
+                <textarea id="cf-message" name="message" rows="5" required
+                          placeholder="Ihre Nachricht..." aria-required="true"></textarea>
+                <span class="form-error" aria-live="polite"></span>
+              </div>
+              <button type="submit" class="btn-submit" id="submit-btn">
+                <span data-i18n="form_send">Nachricht senden</span>
+                <i class="bi bi-send"></i>
+              </button>
+              <div class="form-feedback" aria-live="polite" role="status"></div>
+            </form>
+          </div>
+        </div>
       </div>
-      <div class="swiper-pagination"></div>
-    </div>
+    </section>
+  </main>
 
-  </div>
-
-</section><!-- /Testimonials Section -->
-
-
-   <!-- Contact Section -->
-<section id="contact" class="contact section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Kontakt</h2>
-    <p>Kontaktieren Sie mich für weitere Informationen oder Anfragen. Ich freue mich darauf, von Ihnen zu hören!</p>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade" data-aos-delay="100">
-
-    <div class="row gy-4">
-
-      <div class="col-lg-4">
-        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-          <i class="bi bi-geo-alt flex-shrink-0"></i>
-          <div>
-            <h3>Adresse</h3>
-            <p>Esserstraße 36, 50354 Hürth, Deutschland</p>
-          </div>
-        </div><!-- End Info Item -->
-
-        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-          <i class="bi bi-telephone flex-shrink-0"></i>
-          <div>
-            <h3>Telefon</h3>
-            <p>+49 160-95793713</p>
-          </div>
-        </div><!-- End Info Item -->
-
-        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-          <i class="bi bi-envelope flex-shrink-0"></i>
-          <div>
-            <h3>Email</h3>
-            <p>abdulrhman.asami@gmail.com</p>
-          </div>
-        </div><!-- End Info Item -->
-
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-initials">AA</span>
+        <span>Abdulrahman Asami</span>
       </div>
-
-      <div class="col-lg-8">
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-          <div class="row gy-4">
-
-            <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Ihr Name" required="">
-            </div>
-
-            <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" placeholder="Ihre Email" required="">
-            </div>
-
-            <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Betreff" required="">
-            </div>
-
-            <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Nachricht" required=""></textarea>
-            </div>
-
-            <div class="col-md-12 text-center">
-              <div class="loading">Wird geladen</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Ihre Nachricht wurde gesendet. Vielen Dank!</div>
-
-              <button type="submit">Nachricht senden</button>
-            </div>
-
-          </div>
-        </form>
-      </div><!-- End Contact Form -->
-
-    </div>
-
-  </div>
-
-</section><!-- /Contact Section -->
-
-</main>
-
-<footer id="footer" class="footer position-relative light-background">
-  <div class="container">
-    <h3 class="sitename">Abdulrahman Asami</h3>
-    <p>Vielen Dank, dass Sie meine Website besucht haben. Ich freue mich darauf, mit Ihnen zusammenzuarbeiten!</p>
-    <div class="social-links d-flex justify-content-center">
-      <a href="#"><i class="bi bi-twitter-x"></i></a>
-      <a href="#"><i class="bi bi-facebook"></i></a>
-      <a href="#"><i class="bi bi-instagram"></i></a>
-      <a href="#"><i class="bi bi-skype"></i></a>
-      <a href="#"><i class="bi bi-linkedin"></i></a>
-    </div>
-    <div class="container">
-      <div class="copyright">
-        <span>Copyright</span> <strong class="px-1 sitename">Abdulrahman Asami</strong> <span>Alle Rechte vorbehalten</span>
+      <p class="footer-tagline" data-i18n="footer_tagline">Technische Innovation durch Präzision.</p>
+      <div class="footer-socials">
+        <a href="https://x.com/AbdulRahMa14736" target="_blank" rel="noopener" aria-label="Twitter/X">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="https://www.facebook.com/ZayTeen" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/asami.abdulrahman/" target="_blank" rel="noopener" aria-label="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/abdulrahman-asami-3a7b462b3/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+      </div>
+      <div class="footer-copy">
+        <span>© 2024–2025 Abdulrahman Asami. <span data-i18n="footer_rights">Alle Rechte vorbehalten.</span></span>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Scroll Top -->
-<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Scroll to top -->
+  <button id="scroll-top" class="scroll-top-btn" aria-label="Nach oben scrollen" title="Nach oben">
+    <i class="bi bi-arrow-up-short"></i>
+  </button>
 
-<!-- Preloader -->
-<div id="preloader"></div>
-
-<!-- Vendor JS Files -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/typed.js/typed.umd.js"></script>
-<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-<!-- Main JS File -->
-<script src="assets/js/main.js"></script>
-
+  <!-- Main JS -->
+  <script src="assets/js/portfolio-pro.js" defer></script>
 </body>
-
 </html>
