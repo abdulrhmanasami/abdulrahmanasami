@@ -378,8 +378,12 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          const id = entry.target.id;
+          if (id) {
+            history.replaceState(null, null, '#' + id);
+          }
           navLinks.forEach(link => {
-            link.classList.toggle('active', link.getAttribute('data-section') === entry.target.id);
+            link.classList.toggle('active', link.getAttribute('data-section') === id);
           });
         }
       });
@@ -525,18 +529,30 @@
 
       if (!valid) return;
 
-      // Simulate success (since no backend PHP is present)
+      // Honest MailTo action (Absolute Zero principle: no fake success screens)
       const btn = document.getElementById('submit-btn');
       btn.disabled = true;
-      btn.innerHTML = '<i class="bi bi-hourglass-split"></i> Wird gesendet...';
 
+      const baseEmail = "abdulrhman.asami@gmail.com";
+      const mailtoLink = `mailto:${baseEmail}?subject=${encodeURIComponent(subject.value.trim())}&body=${encodeURIComponent(
+        "Name: " + name.value.trim() + "\n" +
+        "Email: " + email.value.trim() + "\n\n" +
+        "Message:\n" + message.value.trim()
+      )}`;
+
+      // Execute mailto
+      window.location.href = mailtoLink;
+
+      // Provide transparent feedback
+      feedback.className = 'form-feedback success';
+      feedback.textContent = currentLang === 'ar' ? '✓ تم فتح تطبيق البريد الخاص بك!' 
+                            : currentLang === 'en' ? '✓ Email application opened!' 
+                            : '✓ E-Mail-Programm geöffnet!';
+      form.reset();
+      
       setTimeout(() => {
-        feedback.className = 'form-feedback success';
-        feedback.textContent = '✓ Nachricht erfolgreich gesendet! Vielen Dank, ich melde mich bald.';
-        form.reset();
         btn.disabled = false;
-        btn.innerHTML = '<span>Nachricht senden</span><i class="bi bi-send"></i>';
-      }, 1200);
+      }, 2000);
     });
   }
 

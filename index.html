@@ -57,6 +57,23 @@
 </head>
 
 <body class="dark-mode" id="page-top">
+  <!-- Early State Guard (FOUC Prevention) -->
+  <script>
+    (function() {
+      try {
+        const lang = localStorage.getItem('portfolio-lang') || 'de';
+        document.documentElement.setAttribute('lang', lang);
+        document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+        
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        const isDark = savedTheme ? savedTheme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (!isDark) {
+          document.body.classList.remove('dark-mode');
+          document.body.classList.add('light-mode');
+        }
+      } catch (e) {}
+    })();
+  </script>
 
   <!-- ═══════════════════════════════════════════════════════════
        LOADER
