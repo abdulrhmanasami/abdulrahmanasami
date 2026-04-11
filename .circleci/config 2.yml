@@ -1,0 +1,31 @@
+version: 2.1
+
+jobs:
+  generate_gyroid:
+    docker:
+      - image: python:3.9-slim-bullseye
+    resource_class: large  # For better memory handling
+    steps:
+      - checkout
+      - run:
+          name: Install system dependencies
+          command: |
+            apt-get update && apt-get install -y \
+            xvfb \
+            libgl1-mesa-glx \
+            libgomp1
+      - run:
+          name: Install Python packages
+          command: |
+            python -m pip install --upgrade pip
+            pip install numpy pyvista numba scipy
+      - run:
+          name: Run script with reduced resolution (CI-safe)
+          command: |
+            xvfb-run -a python generate_gyroid.py --resolution 100
+
+workflows:
+  version: 2
+  build_and_validate:
+    jobs:
+      - generate_gyroid
