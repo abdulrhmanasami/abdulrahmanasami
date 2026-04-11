@@ -57,20 +57,60 @@
 </head>
 
 <body class="dark-mode" id="page-top">
-  <!-- Early State Guard (FOUC Prevention) -->
+  <!-- i18n Dictionary -->
+  <script src="assets/js/i18n.js"></script>
+
+  <!-- Early State Guard (FOUC Prevention & URL Hydration) -->
   <script>
     (function() {
       try {
-        const lang = localStorage.getItem('portfolio-lang') || 'de';
+        // 1. URL State takes precedence
+        const urlParams = new URLSearchParams(window.location.search);
+        let lang = urlParams.get('lang');
+        if (!lang) {
+          lang = localStorage.getItem('portfolio-lang') || 'de';
+        }
+        localStorage.setItem('portfolio-lang', lang);
         document.documentElement.setAttribute('lang', lang);
         document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
         
+        window.PORTFOLIO_CURRENT_LANG = lang;
+        
         const savedTheme = localStorage.getItem('portfolio-theme');
         const isDark = savedTheme ? savedTheme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (!isDark) {
-          document.body.classList.remove('dark-mode');
-          document.body.classList.add('light-mode');
-        }
+        
+        // Wait for body to append to add classes, or use observer
+        const observer = new MutationObserver((mutations) => {
+          const dict = window.PORTFOLIO_I18N ? window.PORTFOLIO_I18N[window.PORTFOLIO_CURRENT_LANG] : null;
+          mutations.forEach(m => {
+            m.addedNodes.forEach(node => {
+              if (node.nodeType === 1) { // ELEMENT_NODE
+                if (node.tagName === 'BODY') {
+                  if (!isDark) {
+                    node.classList.remove('dark-mode');
+                    node.classList.add('light-mode');
+                  }
+                }
+                if (dict) {
+                  if (node.hasAttribute && node.hasAttribute('data-i18n')) {
+                    const key = node.getAttribute('data-i18n');
+                    if (dict[key]) node.textContent = dict[key];
+                  }
+                  if (node.querySelectorAll) {
+                    node.querySelectorAll('[data-i18n]').forEach(child => {
+                      const key = child.getAttribute('data-i18n');
+                      if (dict[key]) child.textContent = dict[key];
+                    });
+                  }
+                }
+              }
+            });
+          });
+        });
+        observer.observe(document.documentElement, { childList: true, subtree: true });
+        
+        // Disconnect after DOM is parsed to save memory
+        document.addEventListener('DOMContentLoaded', () => observer.disconnect());
       } catch (e) {}
     })();
   </script>
@@ -601,7 +641,7 @@
           <!-- Project 5: Corelivery -->
           <article class="project-card" data-category="innovative" tabindex="0">
             <div class="project-img-wrap">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
+              <img src="assets/img/projects/saas-scale.png"
                    alt="Corelivery SaaS Ecosystem" loading="lazy">
               <div class="project-overlay">
                 <a href="#portfolio" class="overlay-btn" aria-label="Project Details">
@@ -622,7 +662,7 @@
           <!-- Project 6: Alphagorithm -->
           <article class="project-card" data-category="research" tabindex="0">
             <div class="project-img-wrap">
-              <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?auto=format&fit=crop&q=80&w=800"
+              <img src="assets/img/projects/enterprise-architecture.png"
                    alt="Alphagorithm Due Diligence" loading="lazy">
               <div class="project-overlay">
                 <a href="#portfolio" class="overlay-btn" aria-label="Project Details">
@@ -643,7 +683,7 @@
           <!-- Project 7: Audio AI SOTA -->
           <article class="project-card" data-category="research" tabindex="0">
             <div class="project-img-wrap">
-              <img src="https://images.unsplash.com/photo-1518544801976-3e159e50e5bb?auto=format&fit=crop&q=80&w=800"
+              <img src="assets/img/projects/ai_orchestration.png"
                    alt="Audio AI SOTA Analysis" loading="lazy">
               <div class="project-overlay">
                 <a href="#portfolio" class="overlay-btn" aria-label="Project Details">
@@ -677,7 +717,7 @@
           <!-- Ent 1: Nammerha -->
           <article class="project-card" data-category="enterprise" tabindex="0">
             <div class="project-img-wrap">
-              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800"
+              <img src="assets/img/projects/enterprise-architecture.png"
                    alt="Nammerha Sovereign Platform" loading="lazy">
               <div class="project-overlay">
                 <a href="#enterprise" class="overlay-btn" aria-label="Project Details">
@@ -698,7 +738,7 @@
           <!-- Ent 2: Mhrab -->
           <article class="project-card" data-category="enterprise" tabindex="0">
             <div class="project-img-wrap">
-              <img src="https://images.unsplash.com/photo-1544396821-4dd40b938ad3?auto=format&fit=crop&q=80&w=800"
+              <img src="assets/img/projects/saas-scale.png"
                    alt="Mhrab KMP Ecosystem" loading="lazy">
               <div class="project-overlay">
                 <a href="#enterprise" class="overlay-btn" aria-label="Project Details">
@@ -719,7 +759,7 @@
           <!-- Ent 3: Startever -->
           <article class="project-card" data-category="enterprise" tabindex="0">
             <div class="project-img-wrap">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+              <img src="assets/img/projects/enterprise-architecture.png"
                    alt="Startever Market Initiative" loading="lazy">
               <div class="project-overlay">
                 <a href="#enterprise" class="overlay-btn" aria-label="Project Details">
@@ -740,7 +780,7 @@
           <!-- Ent 4: Cloud Citadel & Georavity -->
           <article class="project-card" data-category="enterprise" tabindex="0">
             <div class="project-img-wrap">
-              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800"
+              <img src="assets/img/projects/enterprise-architecture.png"
                    alt="Cloud Citadel Infrastructure" loading="lazy">
               <div class="project-overlay">
                 <a href="#enterprise" class="overlay-btn" aria-label="Project Details">
@@ -776,7 +816,7 @@
           <!-- Lab 1: Thunderound DSP -->
           <article class="project-card" data-category="lab" tabindex="0">
             <div class="project-img-wrap">
-              <img src="https://images.unsplash.com/photo-1618060877028-2ce85e985172?auto=format&fit=crop&q=80&w=800"
+              <img src="assets/img/projects/ai_orchestration.png"
                    alt="Thunderound DSP Engine" loading="lazy">
               <div class="project-overlay">
                 <a href="#lab" class="overlay-btn" aria-label="Project Details">
@@ -797,7 +837,7 @@
           <!-- Lab 2: Codex-RS -->
           <article class="project-card" data-category="lab" tabindex="0">
             <div class="project-img-wrap">
-              <img src="https://images.unsplash.com/photo-1607799279861-4dddf96cebb3?auto=format&fit=crop&q=80&w=800"
+              <img src="assets/img/projects/ai_orchestration.png"
                    alt="Codex-RS Autonomous AI" loading="lazy">
               <div class="project-overlay">
                 <a href="#lab" class="overlay-btn" aria-label="Project Details">
@@ -818,7 +858,7 @@
           <!-- Lab 3: Modamoda Enterprise -->
           <article class="project-card" data-category="lab" tabindex="0">
             <div class="project-img-wrap">
-              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800"
+              <img src="assets/img/projects/saas-scale.png"
                    alt="Modamoda Enterprise Architecture" loading="lazy">
               <div class="project-overlay">
                 <a href="#lab" class="overlay-btn" aria-label="Project Details">
@@ -958,6 +998,23 @@
       </div>
     </div>
   </footer>
+
+  <!-- Project Details Modal -->
+  <dialog id="project-modal" class="glass-modal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <div class="modal-body">
+        <img id="modal-img" src="" alt="Project Image" loading="lazy">
+        <div class="modal-text">
+          <div class="modal-tags" id="modal-tags"></div>
+          <h3 id="modal-title">Project Title</h3>
+          <p id="modal-desc">Project description goes here.</p>
+        </div>
+      </div>
+    </div>
+  </dialog>
 
   <!-- Scroll to top -->
   <button id="scroll-top" class="scroll-top-btn" aria-label="Nach oben scrollen" title="Nach oben">

@@ -7,202 +7,9 @@
   'use strict';
 
   /* ═══════════════════════════════════════════════════════════
-     i18n DICTIONARY
+     i18n DICTIONARY (Extracted to i18n.js for early injection)
   ════════════════════════════════════════════════════════════ */
-  const i18n = {
-    de: {
-      nav_home: 'Home', nav_about: 'Über mich', nav_skills: 'Fähigkeiten',
-      nav_resume: 'Lebenslauf', nav_portfolio: 'Portfolio', nav_enterprise: 'Enterprise', nav_lab: 'Innovation', nav_contact: 'Kontakt',
-      hero_greeting: 'Hallo, ich bin',
-      hero_role_prefix: 'Ich bin',
-      hero_tagline: 'Technische Innovation durch Präzision — von der Idee zum 3D-Modell.',
-      cta_portfolio: 'Portfolio ansehen', cta_contact: 'Kontakt aufnehmen',
-      about_tag: 'Wer ich bin', about_title: 'Über mich',
-      about_subtitle: 'Technischer Produktdesigner & 3D-Visualizer',
-      about_bio: 'Während meiner Ausbildung am Berufsförderungswerk Köln habe ich gelernt, industrielle Designlösungen mit Tools wie SolidWorks zu entwickeln und kreatives Denken mit technischer Präzision zu verbinden. Mein Ziel ist es, innovative und praxisorientierte Produkte zu entwickeln, die einen positiven Einfluss auf die Industrie haben.',
-      stat_years: 'Jahre Erfahrung', stat_projects: 'Projekte',
-      info_name: 'Name', info_city: 'Stadt', info_phone: 'Telefon',
-      info_email: 'Email', info_degree: 'Abschluss',
-      info_degree_val: 'Technischer Produktdesigner (in Ausbildung)',
-      info_freelance: 'Freelance', info_freelance_val: 'Verfügbar',
-      btn_download_cv: 'Lebenslauf herunterladen',
-      skills_tag: 'Werkzeugkasten', skills_title: 'Fähigkeiten',
-      skill_cat_3d: '3D & CAD-Design', skill_cat_prod: 'Produktentwicklung',
-      skill_techzeich: 'Technisches Zeichnen', skill_viz: 'Projektvisualisierung', skill_proto: 'Prototyping',
-      resume_tag: 'Karriere', resume_title: 'Beruflicher Werdegang', cv_download: 'Lebenslauf (PDF)',
-      resume_exp: 'Berufserfahrung', resume_edu: 'Ausbildung', resume_certs: 'Zertifizierungen',
-      job1_title: 'Technischer Zeichner (Praktikum)',
-      job1_detail1: '3D-Konstruktion mit SolidWorks auf Fortgeschrittenen-Niveau',
-      job1_detail2: 'Erstellung technischer Zeichnungen und Dokumentationen',
-      job1_detail3: 'Mitarbeit am Referenzprojekt: Automatisierte Förderanlage',
-      tag_tech_doc: 'Technische Doku', tag_machine: 'Maschinenbau',
-      edu1_title: 'Technischer Produktdesigner',
-      edu1_detail1: 'Maschinenbaugrundlagen & Fertigungstechnik',
-      edu1_detail2: '3D-CAD Konstruktion (SolidWorks, Blender)',
-      edu1_detail3: 'Technische Kommunikation & Dokumentation',
-      edu1_detail4: 'Werkstoffkunde & Produktionsplanung',
-      edu2_title: 'Allgemeine & technische Vorbildung',
-      edu2_detail1: 'Technische und kreative Selbstausbildung (Blender, Cinema 4D)',
-      edu2_detail2: 'Deutsch als Zweitsprache (Integrationskurs)',
-      cert_by: 'Zertifiziert durch Dassault Systèmes',
-      portfolio_tag: 'Meine Arbeit', portfolio_title: 'Portfolio',
-      filter_all: 'Alle', filter_real: 'Reale Projekte',
-      filter_innovative: 'Innovativ', filter_research: 'Forschung',
-      proj1_desc: 'Design und Optimierung eines kryogenen Wärmetauschers basierend auf TPMS-Strukturen für die NASA.',
-      proj2_desc: 'Konstruktion und kinematische Analyse einer komplexen mechanischen Vorrichtung (Julito).',
-      proj3_desc: 'Neukonstruktion und vollständige Planungsphase eines mobilen TPD-Präsentationswagens.',
-      proj4_desc: 'Umfassendes Branding und Produktdesign für die Premium-Lebensmittelmarke FIG & Olive.',
-      proj5_desc: 'Konzeptionierung eines White-Label SaaS-Ökosystems für Ride-Hailing und Logistik (Uber-Modell). Entwicklung dynamischer Preisstrategien, mandantenfähiger B2B-Architekturen und hochskalierbarer UI/UX-Frameworks.',
-      proj6_desc: 'Durchführung einer fundierten Tech-Due-Diligence und Entwicklung strategischer Businesspläne für ein deutsches Technologie-Startup. Fokus auf Infrastruktur-Skalierbarkeit, Systemarchitektur und technologische Marktpositionierung.',
-      proj7_desc: 'Umfassende State-of-the-Art (SOTA) Gap-Analyse von Audio-KI-Modellen. Evaluierung generativer akustischer Technologien zur Identifizierung disruptiver Produktchancen und Analyse algorithmischer Grenzen.',
-      tag_aerospace: 'Luft- und Raumfahrt', tag_cad: 'Advanced CAD', tag_assembly: 'Baugruppe',
-      tag_kinematics: 'Kinematik', tag_planning: 'Projektplanung', tag_design: 'Produktdesign', tag_saas: 'SaaS', tag_strategy: 'Product Strategy', tag_duedil: 'Due Diligence', tag_architecture: 'Systemarchitektur', tag_ai: 'KI-Forschung', tag_sota: 'SOTA Analysis',
-      enterprise_tag: 'Deep-Tech & Strategie', enterprise_title: 'Enterprise-Architektur',
-      ent1_title: 'Nammerha Sovereign Platform', ent1_desc: 'OCDS-konforme, souveräne Plattform für den Wiederaufbau. Integration von Ledger-Systemen, GPS-Verifizierung und robuster Backend-Architektur.',
-      ent2_title: 'Mhrab KMP Ecosystem', ent2_desc: 'Skalierbare Cross-Platform-Applikation (Kotlin Multiplatform) mit 3D-Spatial-Integration und KI-getriebener Governance.',
-      ent3_title: 'Startever Market Initiative', ent3_desc: 'Umfassende strategische Forschung zum digitalen Wandel und zur digitalen Ökonomie in Krisenregionen (Post-Liberation Digital Economy).',
-      ent4_title: 'Cloud Citadel & Georavity', ent4_desc: 'Hochverfügbare Cloud-Infrastruktur-Konzepte kombiniert mit präziser raumbezogener Intelligenz (Geospatial Intelligence).',
-      tag_sovereign: 'Sovereign Tech', tag_kmp: 'Kotlin', tag_market: 'Marktanalyse', tag_infra: 'Cloud-Infrastruktur',
-      nav_lab: 'Innovation', lab_tag: 'Innovation & Ideen', lab_title: 'Konzeptlabor', lab_subtitle: 'Konzepte in Entwicklung',
-      lab1_title: 'Thunderound DSP Engine', lab1_desc: 'Leistungsstarke Audio-Verarbeitungs-Engine mit IPC in Rust und Python ML-Modellen für Echtzeit-Stimmkonvertierung.',
-      lab2_title: 'Codex-RS (Autonomous AI)', lab2_desc: 'Autonome KI-Agenten Architektur (CLI/TUI) in Rust mit isolierter Linux-Sandbox und MCP-Integration.',
-      lab3_title: 'Modamoda Enterprise', lab3_desc: 'Hochskalierbare E-Commerce-Monorepo-Architektur mit integrierten Policy-Engines und Mandantenfähigkeit.',
-      tag_rust: 'Rust', tag_conceptlab: 'Konzept', tag_ml: 'Deep Audio AI', tag_ai_orch: 'AI Orchestration', tag_saas: 'SaaS', tag_monorepo: 'Monorepo',
-      contact_tag: 'Zusammenarbeit', contact_title: 'Kontakt',
-      contact_intro: 'Haben Sie ein Projekt oder eine Idee? Ich freue mich auf Ihre Nachricht!',
-      form_name: 'Ihr Name', form_subject: 'Betreff', form_message: 'Nachricht', form_send: 'Nachricht senden',
-      footer_tagline: 'Technische Innovation durch Präzision.',
-      footer_rights: 'Alle Rechte vorbehalten.',
-      typed_strings: ['Technischer Produktdesigner', 'CAD-Spezialist', 'Blender Artist', '3D-Visualizer', 'Produktentwickler'],
-    },
-    en: {
-      nav_home: 'Home', nav_about: 'About', nav_skills: 'Skills',
-      nav_resume: 'Resume', nav_portfolio: 'Portfolio', nav_enterprise: 'Enterprise', nav_lab: 'Innovation', nav_contact: 'Contact',
-      hero_greeting: "Hello, I'm",
-      hero_role_prefix: "I'm",
-      hero_tagline: 'Technical innovation through precision — from concept to 3D model.',
-      cta_portfolio: 'View Portfolio', cta_contact: 'Get in Touch',
-      about_tag: 'Who I Am', about_title: 'About Me',
-      about_subtitle: 'Technical Product Designer & 3D Visualizer',
-      about_bio: 'During my training at BFW Cologne, I learned to develop industrial design solutions using tools like SolidWorks, combining creative thinking with technical precision. My goal is to develop innovative, practice-oriented products that positively impact the industry.',
-      stat_years: 'Years Exp.', stat_projects: 'Projects',
-      info_name: 'Name', info_city: 'City', info_phone: 'Phone',
-      info_email: 'Email', info_degree: 'Degree',
-      info_degree_val: 'Technical Product Designer (Trainee)',
-      info_freelance: 'Freelance', info_freelance_val: 'Available',
-      btn_download_cv: 'Download CV',
-      skills_tag: 'Toolbox', skills_title: 'Skills',
-      skill_cat_3d: '3D & CAD Design', skill_cat_prod: 'Product Development',
-      skill_techzeich: 'Technical Drawing', skill_viz: 'Project Visualization', skill_proto: 'Prototyping',
-      resume_tag: 'Career', resume_title: 'Work Experience', cv_download: 'Download CV (PDF)',
-      resume_exp: 'Experience', resume_edu: 'Education', resume_certs: 'Certifications',
-      job1_title: 'Technical Drafter (Internship)',
-      job1_detail1: 'Advanced 3D modeling with SolidWorks',
-      job1_detail2: 'Creating technical drawings and documentation',
-      job1_detail3: 'Reference project: Automated conveyor system',
-      tag_tech_doc: 'Technical Docs', tag_machine: 'Mechanical Eng.',
-      edu1_title: 'Technical Product Designer',
-      edu1_detail1: 'Mechanical engineering fundamentals', edu1_detail2: '3D-CAD design (SolidWorks, Blender)',
-      edu1_detail3: 'Technical communication & documentation', edu1_detail4: 'Materials science & production planning',
-      edu2_title: 'General & Technical Education',
-      edu2_detail1: 'Self-education in 3D design (Blender, Cinema 4D)',
-      edu2_detail2: 'German as second language',
-      cert_by: 'Certified by Dassault Systèmes',
-      portfolio_tag: 'My Work', portfolio_title: 'Portfolio',
-      filter_all: 'All', filter_real: 'Real Projects',
-      filter_innovative: 'Innovative', filter_research: 'Research',
-      proj1_desc: 'Design and optimization of a TPU-based cryogenic heat exchanger for advanced aerospace applications.',
-      proj2_desc: 'Engineering and kinematic analysis of a complex mechanical assembly using SolidWorks.',
-      proj3_desc: 'New design and complete planning phase for a mobile presentation cart for technical products.',
-      proj4_desc: 'Comprehensive branding and commercial product design for the premium food brand FIG & Olive.',
-      proj5_desc: 'Architected a comprehensive White-Label SaaS ecosystem for ride-hailing and logistics (Uber-model). Developed dynamic pricing strategies, multi-tenant B2B architectures, and highly scalable UI/UX frameworks.',
-      proj6_desc: 'Conducted rigorous Technical Due Diligence and crafted strategic business plans for a German tech startup. Focused on infrastructure scalability, system architecture, and tech-driven market positioning.',
-      proj7_desc: 'Comprehensive State-of-the-Art (SOTA) Gap Analysis in Audio AI models. Evaluated generative acoustic technologies to identify disruptive product opportunities and understand algorithmic limitations.',
-      tag_aerospace: 'Aerospace', tag_cad: 'Advanced CAD', tag_assembly: 'Assembly',
-      tag_kinematics: 'Kinematics', tag_planning: 'Project Planning', tag_design: 'Product Design', tag_saas: 'SaaS', tag_strategy: 'Product Strategy', tag_duedil: 'Due Diligence', tag_architecture: 'System Architecture', tag_ai: 'AI Research', tag_sota: 'SOTA Analysis',
-      enterprise_tag: 'Deep-Tech & Strategy', enterprise_title: 'Enterprise Architecture',
-      ent1_title: 'Nammerha Sovereign Platform', ent1_desc: 'OCDS-compliant sovereign reconstruction platform featuring immutable ledgers, GPS-verified tracking, and highly resilient backend architecture.',
-      ent2_title: 'Mhrab KMP Ecosystem', ent2_desc: 'High-performance cross-platform application (Kotlin Multiplatform) integrating 3D spatial environments and AI safety governance.',
-      ent3_title: 'Startever Market Initiative', ent3_desc: 'Comprehensive strategic market research on digital transformation and mobile app economy in post-liberation regions.',
-      ent4_title: 'Cloud Citadel & Georavity', ent4_desc: 'Architectural blueprints for highly available, defensive cloud infrastructures coupled with advanced geospatial intelligence routing.',
-      tag_sovereign: 'Sovereign Tech', tag_kmp: 'Kotlin', tag_market: 'Market Research', tag_infra: 'Cloud Infrastructure',
-      nav_lab: 'Innovation', lab_tag: 'Ideas & Incubation', lab_title: 'Concept Studio', lab_subtitle: 'Concepts in active development',
-      lab1_title: 'Thunderound DSP Engine', lab1_desc: 'High-performance audio DSP engine built in Rust with IPC, driving Python ML wrappers for Real-Time Voice Conversion.',
-      lab2_title: 'Codex-RS (Autonomous AI)', lab2_desc: 'Autonomous AI Agent architecture in Rust featuring a secure Linux Sandbox, TUI, and full MCP protocol integration.',
-      lab3_title: 'Modamoda Enterprise', lab3_desc: 'Highly scalable e-commerce monorepo architecture engineered with dynamic policy engines and multi-tenant isolation.',
-      tag_rust: 'Rust', tag_conceptlab: 'Concept', tag_ml: 'Deep Audio AI', tag_ai_orch: 'AI Orchestration', tag_saas: 'SaaS', tag_monorepo: 'Monorepo',
-      contact_tag: 'Collaboration', contact_title: 'Contact',
-      contact_intro: 'Have a project or idea? I look forward to hearing from you!',
-      form_name: 'Your Name', form_subject: 'Subject', form_message: 'Message', form_send: 'Send Message',
-      footer_tagline: 'Technical innovation through precision.',
-      footer_rights: 'All Rights Reserved.',
-      typed_strings: ['Technical Product Designer', 'CAD Specialist', 'Blender Artist', '3D Visualizer', 'Product Developer'],
-    },
-    ar: {
-      nav_home: 'الرئيسية', nav_about: 'عني', nav_skills: 'المهارات',
-      nav_resume: 'السيرة الذاتية', nav_portfolio: 'أعمالي', nav_enterprise: 'مؤسسات', nav_lab: 'ابتكار', nav_contact: 'تواصل',
-      hero_greeting: 'مرحباً، أنا',
-      hero_role_prefix: 'أنا',
-      hero_tagline: 'ابتكار تقني بدقة محترفة — من الفكرة إلى النموذج ثلاثي الأبعاد.',
-      cta_portfolio: 'عرض الأعمال', cta_contact: 'تواصل معي',
-      about_tag: 'من أنا', about_title: 'نبذة عني',
-      about_subtitle: 'مصمم منتجات تقني ومحترف ثلاثي الأبعاد',
-      about_bio: 'خلال تدريبي في معهد BFW كولن، تعلمت تطوير حلول تصميم صناعية باستخدام أدوات مثل SolidWorks، مع دمج التفكير الإبداعي بالدقة التقنية. هدفي تطوير منتجات مبتكرة وعملية تؤثر إيجاباً على الصناعة.',
-      stat_years: 'سنوات خبرة', stat_projects: 'مشروع',
-      info_name: 'الاسم', info_city: 'المدينة', info_phone: 'الهاتف',
-      info_email: 'البريد', info_degree: 'الشهادة',
-      info_degree_val: 'مصمم منتجات تقني (قيد الإتمام)',
-      info_freelance: 'عمل حر', info_freelance_val: 'متاح',
-      btn_download_cv: 'تحميل السيرة الذاتية',
-      skills_tag: 'مجموعة الأدوات', skills_title: 'المهارات',
-      skill_cat_3d: 'تصميم ثلاثي الأبعاد و CAD', skill_cat_prod: 'تطوير المنتجات',
-      skill_techzeich: 'الرسم التقني', skill_viz: 'تصور المشاريع', skill_proto: 'النمذجة الأولية',
-      resume_tag: 'المسيرة المهنية', resume_title: 'السيرة الذاتية', cv_download: 'تحميل السيرة الذاتية (PDF)',
-      resume_exp: 'الخبرة العملية', resume_edu: 'التعليم', resume_certs: 'الشهادات',
-      job1_title: 'رسام تقني (تدريب عملي)',
-      job1_detail1: 'نمذجة متقدمة بـ SolidWorks', job1_detail2: 'إعداد الرسومات والتوثيق التقني',
-      job1_detail3: 'مشروع مرجعي: نظام الناقل الآلي',
-      tag_tech_doc: 'توثيق تقني', tag_machine: 'هندسة ميكانيكية',
-      edu1_title: 'مصمم منتجات تقني',
-      edu1_detail1: 'أساسيات الهندسة الميكانيكية', edu1_detail2: 'تصميم CAD ثلاثي الأبعاد',
-      edu1_detail3: 'التواصل التقني والتوثيق', edu1_detail4: 'علم المواد والتخطيط الإنتاجي',
-      edu2_title: 'تعليم عام وتقني',
-      edu2_detail1: 'تعليم ذاتي في Blender و Cinema 4D',
-      edu2_detail2: 'اللغة الألمانية كلغة ثانية',
-      cert_by: 'معتمد من Dassault Systèmes',
-      portfolio_tag: 'أعمالي', portfolio_title: 'معرض الأعمال',
-      filter_all: 'الكل', filter_real: 'مشاريع حقيقية',
-      filter_innovative: 'ابتكارية', filter_research: 'أبحاث',
-      proj1_desc: 'تصميم وتحسين مبادل حراري مبرد يعتمد على هياكل TPMS المتقدمة لتطبيقات الفضاء.',
-      proj2_desc: 'هندسة وتحليل حركي لتجميعة ميكانيكية معقدة باستخدام SolidWorks.',
-      proj3_desc: 'إعادة تصميم وتخطيط هندسي كامل لعربة عرض متنقلة للمنتجات التقنية.',
-      proj4_desc: 'تصميم هوية بصرية وتغليف منتجات تجارية فاخرة لعلامة FIG & Olive.',
-      proj5_desc: 'هندسة وبناء نظام بيئي متكامل (White-Label SaaS) مخصص للنقل اللوجستي والتشاركي (نموذج مشابه لـ Uber). شمل العمل تخطيط البنية متعددة المستأجرين (B2B)، وهندسة استراتيجيات التسعير الديناميكية، وتصميم واجهات وتجربة المستخدم (UI/UX) القابلة للتوسع.',
-      proj6_desc: 'تنفيذ الفحص النافي للجهالة التقني (Tech-Due-Diligence) وتصميم خطط أعمال استراتيجية لشركة تقنية ألمانية ناشئة، مع التخطيط الدقيق لقابلية توسع البنية التحتية، وهندسة الأنظمة، والتموضع التقني في السوق.',
-      proj7_desc: 'بحث وتحليل استراتيجي حديث (State-of-the-Art Gap Analysis) للفجوات التقنية في نماذج الذكاء الاصطناعي الصوتي. تم تقييم التقنيات السمعية التوليدية لتحديد الفرص المبتكرة للمنتجات الجديدة وفهم القيود الخوارزمية.',
-      tag_aerospace: 'الفضاء', tag_cad: 'CAD متقدم', tag_assembly: 'تجميع هندسي',
-      tag_kinematics: 'تحليل حركي', tag_planning: 'تخطيط العمليات', tag_design: 'تصميم المنتجات', tag_saas: 'SaaS', tag_strategy: 'استراتيجية أعمال', tag_duedil: 'الفحص النافي للجهالة', tag_architecture: 'هندسة النظم', tag_ai: 'أبحاث الذكاء الاصطناعي', tag_sota: 'تحليل SOTA',
-      enterprise_tag: 'تقنيات عميقة واستراتيجية', enterprise_title: 'هندسة المؤسسات',
-      ent1_title: 'منصة نَمِّرها السيادية', ent1_desc: 'منصة سيادية لإعادة الإعمار (OCDS-compliant) تتميز بتتبع دقيق (GPS)، وسجلات غير قابلة للتغيير، وبنية تحتية عالية المرونة والموثوقية.',
-      ent2_title: 'بيئة محرابي (Mhrab KMP)', ent2_desc: 'تطبيق متقاطع المنصات عالي الأداء (Kotlin Multiplatform) يدمج بيئات مكانية ثلاثية الأبعاد وأنظمة حوكمة قائمة على الذكاء الاصطناعي.',
-      ent3_title: 'مبادرة Startever الاستراتيجية', ent3_desc: 'بحث استراتيجي معمق لدراسة التحول الرقمي واقتصاد تطبيقات الهواتف الذكية المبتكرة في بيئات وتحديات ما بعد الأزمات.',
-      ent4_title: 'منصات Cloud Citadel & Georavity', ent4_desc: 'مخططات هندسية متقدمة لبناء بنى تحتية سحابية دفاعية وعالية التوافر، مقترنة بخدمات التوجيه والاستخبارات الجغرافية.',
-      tag_sovereign: 'أنظمة سيادية', tag_kmp: 'Kotlin', tag_market: 'أبحاث السوق', tag_infra: 'بنية سحابية',
-      nav_lab: 'ابتكار', lab_tag: 'مفاهيم وأفكار', lab_title: 'مختبر الابتكار', lab_subtitle: 'مشاريع وابتكارات قيد التطوير',
-      lab1_title: 'Thunderound DSP Engine', lab1_desc: 'محرك معالجة صوتية عالي الأداء (DSP) مبني بلغة Rust، مدمج بنماذج ذكاء اصطناعي للتحويل الصوتي اللحظي.',
-      lab2_title: 'Codex-RS (Autonomous AI)', lab2_desc: 'بيئة لتوجيه وكلاء الذكاء الاصطناعي (AI Agents) مبنية بـ Rust، معزولة بصندوق حماية وتدعم بروتوكول MCP.',
-      lab3_title: 'Modamoda Enterprise', lab3_desc: 'بنية E-Commerce عملاقة للشركات، مبنية بهندسة (Monorepo) ومجهزة بمحركات تحكم وأنظمة عزل متطورة.',
-      tag_rust: 'Rust', tag_conceptlab: 'مفهوم ناشئ', tag_ml: 'ذكاء صوتي', tag_ai_orch: 'أتمتة الوكلاء', tag_saas: 'SaaS', tag_monorepo: 'أنظمة Monorepo',
-      contact_tag: 'تعاون', contact_title: 'تواصل',
-      contact_intro: 'هل لديك مشروع أو فكرة؟ يسعدني سماع منك!',
-      form_name: 'اسمك', form_subject: 'الموضوع', form_message: 'الرسالة', form_send: 'إرسال الرسالة',
-      footer_tagline: 'ابتكار تقني بدقة محترفة.',
-      footer_rights: 'جميع الحقوق محفوظة.',
-      typed_strings: ['مصمم منتجات تقني', 'متخصص CAD', 'فنان Blender', 'مصور ثلاثي الأبعاد', 'مطور منتجات'],
-    },
-  };
-
-  let currentLang = localStorage.getItem('portfolio-lang') || 'de';
+  let currentLang = window.PORTFOLIO_CURRENT_LANG || localStorage.getItem('portfolio-lang') || 'de';
   let typedInterval = null;
 
   /* ═══════════════════════════════════════════════════════════
@@ -252,8 +59,12 @@
   function applyLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('portfolio-lang', lang);
+    
+    const url = new URL(window.location);
+    url.searchParams.set('lang', lang);
+    history.pushState(null, '', url);
 
-    const dict = i18n[lang] || i18n.de;
+    const dict = window.PORTFOLIO_I18N ? (window.PORTFOLIO_I18N[lang] || window.PORTFOLIO_I18N['de']) : {};
 
     // Apply direction
     const isRTL = lang === 'ar';
@@ -283,7 +94,7 @@
         applyLanguage(btn.getAttribute('data-lang'));
       });
     });
-    applyLanguage(currentLang);
+    applyLanguage(currentLang || 'de');
   }
 
   /* ═══════════════════════════════════════════════════════════
@@ -445,27 +256,39 @@
     const cards = document.querySelectorAll('.project-card');
     if (!filterBtns.length) return;
 
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => {
-          b.classList.remove('active');
-          b.setAttribute('aria-selected', 'false');
-        });
-        btn.classList.add('active');
-        btn.setAttribute('aria-selected', 'true');
-
-        const filter = btn.getAttribute('data-filter');
-        cards.forEach(card => {
-          const category = card.getAttribute('data-category');
-          const show = filter === 'all' || category === filter;
-          card.style.display = show ? '' : 'none';
-          if (show) {
-            card.style.animation = 'none';
-            card.offsetHeight; // reflow
-            card.style.animation = '';
-          }
-        });
+    function applyFilter(filter) {
+      filterBtns.forEach(b => {
+        const isActive = b.getAttribute('data-filter') === filter;
+        b.classList.toggle('active', isActive);
+        b.setAttribute('aria-selected', isActive ? 'true' : 'false');
       });
+
+      const url = new URL(window.location);
+      if (filter === 'all') url.searchParams.delete('filter');
+      else url.searchParams.set('filter', filter);
+      history.pushState(null, '', url);
+
+      cards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        const show = filter === 'all' || category === filter;
+        card.style.display = show ? '' : 'none';
+        if (show) {
+          card.classList.remove('aos-animate');
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              card.classList.add('aos-animate');
+            });
+          });
+        }
+      });
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const initialFilter = params.get('filter') || 'all';
+    applyFilter(initialFilter);
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => applyFilter(btn.getAttribute('data-filter')));
     });
   }
 
@@ -529,30 +352,46 @@
 
       if (!valid) return;
 
-      // Honest MailTo action (Absolute Zero principle: no fake success screens)
+      // Absolute Zero: Legitimate Async Submit Protocol
       const btn = document.getElementById('submit-btn');
+      const originalText = btn.innerHTML;
       btn.disabled = true;
+      btn.style.opacity = '0.7';
 
-      const baseEmail = "abdulrhman.asami@gmail.com";
-      const mailtoLink = `mailto:${baseEmail}?subject=${encodeURIComponent(subject.value.trim())}&body=${encodeURIComponent(
-        "Name: " + name.value.trim() + "\n" +
-        "Email: " + email.value.trim() + "\n\n" +
-        "Message:\n" + message.value.trim()
-      )}`;
-
-      // Execute mailto
-      window.location.href = mailtoLink;
-
-      // Provide transparent feedback
-      feedback.className = 'form-feedback success';
-      feedback.textContent = currentLang === 'ar' ? '✓ تم فتح تطبيق البريد الخاص بك!' 
-                            : currentLang === 'en' ? '✓ Email application opened!' 
-                            : '✓ E-Mail-Programm geöffnet!';
-      form.reset();
-      
-      setTimeout(() => {
-        btn.disabled = false;
-      }, 2000);
+      fetch('https://formspree.io/f/xvgzovjd', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name.value.trim(),
+          email: email.value.trim(),
+          subject: subject.value.trim(),
+          message: message.value.trim()
+        })
+      }).then(response => {
+        if (response.ok) {
+          feedback.className = 'form-feedback success';
+          feedback.textContent = currentLang === 'ar' ? '✓ تم إرسال رسالتك بنجاح!' 
+                                : currentLang === 'en' ? '✓ Message sent successfully!' 
+                                : '✓ Nachricht erfolgreich gesendet!';
+          form.reset();
+        } else {
+          throw new Error('Network response was not ok');
+        }
+      }).catch(error => {
+        feedback.className = 'form-feedback error';
+        feedback.textContent = currentLang === 'ar' ? '✗ حدث خطأ أثناء الإرسال. يرجى المحاولة لاحقاً.' 
+                              : currentLang === 'en' ? '✗ Error sending message. Please try again.' 
+                              : '✗ Fehler beim Senden. Bitte versuchen Sie es später erneut.';
+      }).finally(() => {
+        setTimeout(() => {
+          btn.disabled = false;
+          btn.style.opacity = '1';
+          btn.innerHTML = originalText;
+        }, 3000);
+      });
     });
   }
 
@@ -607,6 +446,64 @@
   }
 
   /* ═══════════════════════════════════════════════════════════
+     PROJECT MODAL
+  ════════════════════════════════════════════════════════════ */
+  function initProjectModal() {
+    const modal = document.getElementById('project-modal');
+    if (!modal) return;
+    const closeBtn = modal.querySelector('.modal-close');
+    const modalImg = document.getElementById('modal-img');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDesc = document.getElementById('modal-desc');
+    const modalTags = document.getElementById('modal-tags');
+    const overlayBtns = document.querySelectorAll('.overlay-btn');
+
+    const closeModal = () => {
+      modal.close();
+      document.body.style.overflow = '';
+    };
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    overlayBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const card = btn.closest('.project-card');
+        if (!card) return;
+
+        const img = card.querySelector('img').src;
+        const titleEl = card.querySelector('h3[data-i18n]');
+        const descEl = card.querySelector('p[data-i18n]');
+        const tagEls = card.querySelectorAll('.project-tags span[data-i18n]');
+        
+        if (titleEl) {
+          modalTitle.setAttribute('data-i18n', titleEl.getAttribute('data-i18n'));
+          modalTitle.innerText = titleEl.innerText;
+        }
+        if (descEl) {
+          modalDesc.setAttribute('data-i18n', descEl.getAttribute('data-i18n'));
+          modalDesc.innerText = descEl.innerText;
+        }
+
+        modalTags.innerHTML = '';
+        tagEls.forEach(t => {
+          const s = document.createElement('span');
+          s.setAttribute('data-i18n', t.getAttribute('data-i18n'));
+          s.innerText = t.innerText;
+          modalTags.appendChild(s);
+        });
+
+        modalImg.src = img;
+        document.body.style.overflow = 'hidden';
+        modal.showModal();
+      });
+    });
+  }
+
+  /* ═══════════════════════════════════════════════════════════
      MAIN INIT
   ════════════════════════════════════════════════════════════ */
   function init() {
@@ -622,6 +519,7 @@
     initSmoothScroll();
     initFilterKeyboard();
     ensurePlaceholderSVG();
+    initProjectModal();
   }
 
   // Kick off on DOMContentLoaded
