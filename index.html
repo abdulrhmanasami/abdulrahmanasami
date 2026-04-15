@@ -14,6 +14,17 @@
   <meta property="og:url" content="https://abdulrahmanasami.com">
   <meta property="og:type" content="website">
 
+  <!-- Security & Optimization Headers (Platinum Standard) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self' https://formspree.io;">
+  
+  <link rel="alternate" href="https://abdulrahmanasami.com/?lang=de" hreflang="de" />
+  <link rel="alternate" href="https://abdulrahmanasami.com/?lang=en" hreflang="en" />
+  <link rel="alternate" href="https://abdulrahmanasami.com/?lang=ar" hreflang="ar" />
+  <link rel="alternate" href="https://abdulrahmanasami.com/" hreflang="x-default" />
+
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -60,60 +71,8 @@
   <!-- i18n Dictionary -->
   <script src="assets/js/i18n.js"></script>
 
-  <!-- Early State Guard (FOUC Prevention & URL Hydration) -->
-  <script>
-    (function() {
-      try {
-        // 1. URL State takes precedence
-        const urlParams = new URLSearchParams(window.location.search);
-        let lang = urlParams.get('lang');
-        if (!lang) {
-          lang = localStorage.getItem('portfolio-lang') || 'de';
-        }
-        localStorage.setItem('portfolio-lang', lang);
-        document.documentElement.setAttribute('lang', lang);
-        document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-        
-        window.PORTFOLIO_CURRENT_LANG = lang;
-        
-        const savedTheme = localStorage.getItem('portfolio-theme');
-        const isDark = savedTheme ? savedTheme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
-        
-        // Wait for body to append to add classes, or use observer
-        const observer = new MutationObserver((mutations) => {
-          const dict = window.PORTFOLIO_I18N ? window.PORTFOLIO_I18N[window.PORTFOLIO_CURRENT_LANG] : null;
-          mutations.forEach(m => {
-            m.addedNodes.forEach(node => {
-              if (node.nodeType === 1) { // ELEMENT_NODE
-                if (node.tagName === 'BODY') {
-                  if (!isDark) {
-                    node.classList.remove('dark-mode');
-                    node.classList.add('light-mode');
-                  }
-                }
-                if (dict) {
-                  if (node.hasAttribute && node.hasAttribute('data-i18n')) {
-                    const key = node.getAttribute('data-i18n');
-                    if (dict[key]) node.textContent = dict[key];
-                  }
-                  if (node.querySelectorAll) {
-                    node.querySelectorAll('[data-i18n]').forEach(child => {
-                      const key = child.getAttribute('data-i18n');
-                      if (dict[key]) child.textContent = dict[key];
-                    });
-                  }
-                }
-              }
-            });
-          });
-        });
-        observer.observe(document.documentElement, { childList: true, subtree: true });
-        
-        // Disconnect after DOM is parsed to save memory
-        document.addEventListener('DOMContentLoaded', () => observer.disconnect());
-      } catch (e) {}
-    })();
-  </script>
+  <!-- Platinum Standard Early State Guard (Zero-FOUC) -->
+  <script src="assets/js/theme-guard.js"></script>
 
   <!-- ═══════════════════════════════════════════════════════════
        LOADER
@@ -128,11 +87,14 @@
       <span class="loader-initials">AA</span>
     </div>
   </div>
+  <noscript>
+    <style>#site-loader { display: none !important; }</style>
+  </noscript>
 
   <!-- ═══════════════════════════════════════════════════════════
        SIDEBAR NAVIGATION
   ══════════════════════════════════════════════════════════════ -->
-  <nav id="sidebar" role="navigation" aria-label="Hauptnavigation">
+  <nav id="sidebar" role="navigation" aria-label="Hauptnavigation" data-i18n-aria="aria_nav_main">
     <div class="sidebar-brand">
       <span class="brand-initials">AA</span>
       <span class="brand-name">Asami</span>
@@ -167,19 +129,19 @@
 
     <div class="sidebar-actions">
       <!-- Language switcher -->
-      <div class="lang-switcher" role="group" aria-label="Sprache">
+      <div class="lang-switcher" role="group" aria-label="Sprache" data-i18n-aria="aria_lang">
         <button class="lang-btn active" data-lang="de" title="Deutsch">DE</button>
         <button class="lang-btn" data-lang="en" title="English">EN</button>
         <button class="lang-btn" data-lang="ar" title="العربية">AR</button>
       </div>
       <!-- Dark/Light toggle -->
-      <button id="theme-toggle" class="theme-toggle" aria-label="Farbschema wechseln" title="Theme wechseln">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Farbschema wechseln" data-i18n-aria="aria_theme" title="Theme wechseln">
         <i class="bi bi-moon-stars"></i>
       </button>
     </div>
 
     <!-- Mobile toggle -->
-    <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Menü öffnen" aria-expanded="false">
+    <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Menü öffnen" data-i18n-aria="aria_menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
@@ -323,7 +285,7 @@
               </div>
             </div>
 
-            <a href="#" class="download-cv-btn" id="download-cv" aria-label="CV herunterladen">
+            <a href="#" class="download-cv-btn" id="download-cv" aria-label="CV herunterladen" data-i18n-aria="aria_cv">
               <i class="bi bi-download"></i>
               <span data-i18n="btn_download_cv">Lebenslauf herunterladen</span>
             </a>
@@ -415,9 +377,9 @@
           <span class="section-tag" data-i18n="resume_tag">Karriere</span>
           <h2 id="resume-heading" data-i18n="resume_title">Beruflicher Werdegang</h2>
           <div class="section-line"></div>
-          <div style="margin-top: 1.5rem;">
-            <a href="assets/cv/abdulrahman_asami_cv.pdf" target="_blank" class="btn-primary-cta" data-i18n="cv_download" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; font-size: 0.95rem;">
-              <i class="bi bi-file-earmark-pdf" style="font-size: 1.2rem;"></i> Download CV (PDF)
+          <div class="resume-btn-wrap">
+            <a href="assets/cv/abdulrahman_asami_cv.pdf" target="_blank" class="btn-primary-cta resume-cv-btn" data-i18n="cv_download">
+              <i class="bi bi-file-earmark-pdf"></i> Download CV (PDF)
             </a>
           </div>
         </div>
@@ -536,7 +498,7 @@
         </div>
 
         <!-- Filters -->
-        <div class="portfolio-filters" data-aos="fade-up" data-aos-delay="100" role="group" aria-label="Portfolio Filter">
+        <div class="portfolio-filters" data-aos="fade-up" data-aos-delay="100" role="group" aria-label="Portfolio Filter" data-i18n-aria="aria_filter">
           <button class="filter-btn active" data-filter="all" id="filter-all">
             <span data-i18n="filter_all">Alle</span>
           </button>
@@ -578,10 +540,15 @@
           <!-- Project 2: Julito Mechanism -->
           <article class="project-card" data-category="real" tabindex="0">
             <div class="project-img-wrap">
-              <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=800"
-                   alt="Julito Mechanism" loading="lazy">
+              <div class="cad-blueprint-placeholder" aria-label="Julito Mechanism CAD Blueprint Placeholder">
+                <div class="cad-crosshair"></div>
+                <div class="cad-label-wrap">
+                  <span class="cad-label">Julito Mechanism</span>
+                  <span class="cad-status"><span class="cad-system-blink"></span>AWAITING RENDER INJECTION...</span>
+                </div>
+              </div>
               <div class="project-overlay">
-                <a href="#portfolio" class="overlay-btn" aria-label="Project Details">
+                <a href="#portfolio" class="overlay-btn" aria-label="Project Details" data-i18n-aria="aria_project_details">
                   <i class="bi bi-arrow-up-right"></i>
                 </a>
               </div>
@@ -599,10 +566,10 @@
           <!-- Project 3: Präsentationswagen -->
           <article class="project-card" data-category="innovative" tabindex="0">
             <div class="project-img-wrap">
-              <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=800"
+              <img src="assets/img/projects/cad-render-presentation-cart.jpg"
                    alt="Präsentationswagen Blueprint" loading="lazy">
               <div class="project-overlay">
-                <a href="#portfolio" class="overlay-btn" aria-label="Project Details">
+                <a href="#portfolio" class="overlay-btn" aria-label="Project Details" data-i18n-aria="aria_project_details">
                   <i class="bi bi-arrow-up-right"></i>
                 </a>
               </div>
@@ -620,10 +587,10 @@
           <!-- Project 4: FIG & Olive -->
           <article class="project-card" data-category="real" tabindex="0">
             <div class="project-img-wrap">
-              <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=800"
+              <img src="assets/img/projects/cad-render-fig-olive.jpg"
                    alt="FIG & Olive Branding" loading="lazy">
               <div class="project-overlay">
-                <a href="#portfolio" class="overlay-btn" aria-label="Project Details">
+                <a href="#portfolio" class="overlay-btn" aria-label="Project Details" data-i18n-aria="aria_project_details">
                   <i class="bi bi-arrow-up-right"></i>
                 </a>
               </div>
@@ -644,7 +611,7 @@
               <img src="assets/img/projects/saas-scale.png"
                    alt="Corelivery SaaS Ecosystem" loading="lazy">
               <div class="project-overlay">
-                <a href="#portfolio" class="overlay-btn" aria-label="Project Details">
+                <a href="#portfolio" class="overlay-btn" aria-label="Project Details" data-i18n-aria="aria_project_details">
                   <i class="bi bi-arrow-up-right"></i>
                 </a>
               </div>
@@ -665,7 +632,7 @@
               <img src="assets/img/projects/enterprise-architecture.png"
                    alt="Alphagorithm Due Diligence" loading="lazy">
               <div class="project-overlay">
-                <a href="#portfolio" class="overlay-btn" aria-label="Project Details">
+                <a href="#portfolio" class="overlay-btn" aria-label="Project Details" data-i18n-aria="aria_project_details">
                   <i class="bi bi-arrow-up-right"></i>
                 </a>
               </div>
@@ -686,7 +653,7 @@
               <img src="assets/img/projects/ai_orchestration.png"
                    alt="Audio AI SOTA Analysis" loading="lazy">
               <div class="project-overlay">
-                <a href="#portfolio" class="overlay-btn" aria-label="Project Details">
+                <a href="#portfolio" class="overlay-btn" aria-label="Project Details" data-i18n-aria="aria_project_details">
                   <i class="bi bi-arrow-up-right"></i>
                 </a>
               </div>
@@ -741,7 +708,7 @@
               <img src="assets/img/projects/saas-scale.png"
                    alt="Mhrab KMP Ecosystem" loading="lazy">
               <div class="project-overlay">
-                <a href="#enterprise" class="overlay-btn" aria-label="Project Details">
+                <a href="#enterprise" class="overlay-btn" aria-label="Project Details" data-i18n-aria="aria_project_details">
                   <i class="bi bi-arrow-up-right"></i>
                 </a>
               </div>
@@ -762,7 +729,7 @@
               <img src="assets/img/projects/enterprise-architecture.png"
                    alt="Startever Market Initiative" loading="lazy">
               <div class="project-overlay">
-                <a href="#enterprise" class="overlay-btn" aria-label="Project Details">
+                <a href="#enterprise" class="overlay-btn" aria-label="Project Details" data-i18n-aria="aria_project_details">
                   <i class="bi bi-arrow-up-right"></i>
                 </a>
               </div>
@@ -783,7 +750,7 @@
               <img src="assets/img/projects/enterprise-architecture.png"
                    alt="Cloud Citadel Infrastructure" loading="lazy">
               <div class="project-overlay">
-                <a href="#enterprise" class="overlay-btn" aria-label="Project Details">
+                <a href="#enterprise" class="overlay-btn" aria-label="Project Details" data-i18n-aria="aria_project_details">
                   <i class="bi bi-arrow-up-right"></i>
                 </a>
               </div>
@@ -808,7 +775,7 @@
         <div class="section-header" data-aos="fade-up">
           <span class="section-tag" data-i18n="lab_tag">Innovation & Ideen</span>
           <h2 id="lab-heading" data-i18n="lab_title">Konzeptlabor</h2>
-          <p style="color: var(--text-muted); margin-top: 1rem; font-size: 1.1rem; max-width: 600px;" data-i18n="lab_subtitle">Konzepte und Projekte in der Entwicklungsphase</p>
+          <p class="lab-subtitle" data-i18n="lab_subtitle">Konzepte und Projekte in der Entwicklungsphase</p>
           <div class="section-line"></div>
         </div>
         <div class="projects-grid" data-aos="fade-up" data-aos-delay="200">
@@ -840,7 +807,7 @@
               <img src="assets/img/projects/ai_orchestration.png"
                    alt="Codex-RS Autonomous AI" loading="lazy">
               <div class="project-overlay">
-                <a href="#lab" class="overlay-btn" aria-label="Project Details">
+                <a href="#lab" class="overlay-btn" aria-label="Project Details" data-i18n-aria="aria_project_details">
                   <i class="bi bi-arrow-up-right"></i>
                 </a>
               </div>
@@ -861,7 +828,7 @@
               <img src="assets/img/projects/saas-scale.png"
                    alt="Modamoda Enterprise Architecture" loading="lazy">
               <div class="project-overlay">
-                <a href="#lab" class="overlay-btn" aria-label="Project Details">
+                <a href="#lab" class="overlay-btn" aria-label="Project Details" data-i18n-aria="aria_project_details">
                   <i class="bi bi-arrow-up-right"></i>
                 </a>
               </div>
@@ -1002,7 +969,7 @@
   <!-- Project Details Modal -->
   <dialog id="project-modal" class="glass-modal">
     <div class="modal-content">
-      <button class="modal-close" aria-label="Close modal">
+      <button class="modal-close" aria-label="Close modal" data-i18n-aria="aria_close_modal">
         <i class="bi bi-x-lg"></i>
       </button>
       <div class="modal-body">

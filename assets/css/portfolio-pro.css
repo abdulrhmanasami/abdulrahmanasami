@@ -1608,3 +1608,123 @@ html[dir="rtl"] .timeline-dot { left: auto; right: -1.5rem; transform: translate
   #sidebar, .scroll-top-btn, .hero-bg { display: none; }
   .main-content { margin: 0; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   CAD BLUEPRINT PLACEHOLDER (PLATINUM STANDARD)
+═══════════════════════════════════════════════════════════════ */
+.cad-blueprint-placeholder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  background-image: 
+    linear-gradient(rgba(14, 165, 233, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 165, 233, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: center center;
+}
+
+.cad-blueprint-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 30%, var(--bg-surface) 100%);
+  pointer-events: none;
+}
+
+.cad-crosshair {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1px dashed rgba(14, 165, 233, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: cad-slow-rotate 25s linear infinite;
+  z-index: 2;
+}
+
+.cad-crosshair::before, .cad-crosshair::after {
+  content: '';
+  position: absolute;
+  background: rgba(14, 165, 233, 0.5);
+}
+.cad-crosshair::before { width: 100%; height: 1px; }
+.cad-crosshair::after { width: 1px; height: 100%; }
+
+.cad-label-wrap {
+  position: absolute;
+  bottom: 0.8rem;
+  left: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  z-index: 2;
+}
+
+.cad-label {
+  font-size: 0.72rem;
+  color: var(--color-brand-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(14, 165, 233, 0.15);
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+  border-left: 2px solid var(--color-brand);
+  backdrop-filter: blur(4px);
+}
+
+.cad-status {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  display: flex;
+  align-items: center;
+}
+
+.cad-system-blink {
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  margin-right: 6px;
+  animation: blink 1.5s infinite step-end;
+}
+
+@keyframes cad-slow-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PLATINUM STANDARD: UTILITY CLASSES (Banish Inline Styles)
+═══════════════════════════════════════════════════════════════ */
+.resume-btn-wrap {
+  margin-top: 1.5rem;
+}
+
+.resume-cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+.resume-cv-btn i {
+  font-size: 1.2rem;
+}
+
+.lab-subtitle {
+  color: var(--text-muted);
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  max-width: 600px;
+}
