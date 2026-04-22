@@ -66,6 +66,8 @@ window.PORTFOLIO_I18N = {
     form_name: 'Ihr Name', form_subject: 'Betreff', form_message: 'Nachricht', form_send: 'Nachricht senden',
     footer_tagline: 'Technische Innovation durch Präzision.',
     footer_rights: 'Alle Rechte vorbehalten.',
+    aria_nav_main: 'Hauptnavigation', aria_lang: 'Sprache wechseln', aria_theme: 'Farbschema wechseln', aria_menu: 'Menü öffnen',
+    aria_cv: 'Lebenslauf herunterladen', aria_filter: 'Portfolio Filter', aria_project_details: 'Projektdetails', aria_close_modal: 'Modal schließen',
     typed_strings: ['Technischer Produktdesigner', 'CAD-Spezialist', 'Blender Artist', '3D-Visualizer', 'Produktentwickler'],
   },
   en: {
@@ -129,6 +131,8 @@ window.PORTFOLIO_I18N = {
     form_name: 'Your Name', form_subject: 'Subject', form_message: 'Message', form_send: 'Send Message',
     footer_tagline: 'Technical innovation through precision.',
     footer_rights: 'All Rights Reserved.',
+    aria_nav_main: 'Main Navigation', aria_lang: 'Change Language', aria_theme: 'Toggle Theme', aria_menu: 'Open Menu',
+    aria_cv: 'Download CV', aria_filter: 'Portfolio Filter', aria_project_details: 'Project Details', aria_close_modal: 'Close Modal',
     typed_strings: ['Technical Product Designer', 'CAD Specialist', 'Blender Artist', '3D Visualizer', 'Product Developer'],
   },
   ar: {
@@ -191,6 +195,8 @@ window.PORTFOLIO_I18N = {
     form_name: 'اسمك', form_subject: 'الموضوع', form_message: 'الرسالة', form_send: 'إرسال الرسالة',
     footer_tagline: 'ابتكار تقني بدقة محترفة.',
     footer_rights: 'جميع الحقوق محفوظة.',
+    aria_nav_main: 'القائمة الرئيسية', aria_lang: 'تغيير اللغة', aria_theme: 'تغيير المظهر', aria_menu: 'فتح القائمة',
+    aria_cv: 'تحميل السيرة الذاتية', aria_filter: 'فلتر الأعمال', aria_project_details: 'تفاصيل المشروع', aria_close_modal: 'إغلاق',
     typed_strings: ['مصمم منتجات تقني', 'متخصص CAD', 'فنان Blender', 'مصور ثلاثي الأبعاد', 'مطور منتجات'],
   },
 };

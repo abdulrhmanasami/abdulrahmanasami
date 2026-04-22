@@ -79,6 +79,14 @@
       }
     });
 
+    // Translate all ARIA attributes
+    document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+      const key = el.getAttribute('data-i18n-aria');
+      if (dict[key] !== undefined) {
+        el.setAttribute('aria-label', dict[key]);
+      }
+    });
+
     // Update active lang button
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
@@ -352,13 +360,13 @@
 
       if (!valid) return;
 
-      // Absolute Zero: Legitimate Async Submit Protocol
+      // Absolute Zero: Legitimate Async Submit Protocol with Timeout
       const btn = document.getElementById('submit-btn');
       const originalText = btn.innerHTML;
       btn.disabled = true;
       btn.style.opacity = '0.7';
 
-      fetch('https://formspree.io/f/xvgzovjd', {
+      const fetchPromise = fetch('https://formspree.io/f/xvgzovjd', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -370,7 +378,13 @@
           subject: subject.value.trim(),
           message: message.value.trim()
         })
-      }).then(response => {
+      });
+
+      const timeoutPromise = new Promise((_, reject) => 
+        setTimeout(() => reject(new Error('Request timed out')), 8000)
+      );
+
+      Promise.race([fetchPromise, timeoutPromise]).then(response => {
         if (response.ok) {
           feedback.className = 'form-feedback success';
           feedback.textContent = currentLang === 'ar' ? '✓ تم إرسال رسالتك بنجاح!' 
