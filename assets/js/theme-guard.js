@@ -11,6 +11,8 @@
     const docEl = document.documentElement;
     docEl.setAttribute('lang', lang);
     docEl.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    docEl.classList.remove('no-js');
+    docEl.classList.add('js');
     window.PORTFOLIO_CURRENT_LANG = lang;
     
     const savedTheme = localStorage.getItem('portfolio-theme');
