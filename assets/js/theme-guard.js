@@ -5,7 +5,7 @@
 (function() {
   try {
     const urlParams = new URLSearchParams(window.location.search);
-    let lang = urlParams.get('lang') || localStorage.getItem('portfolio-lang') || 'de';
+    let lang = urlParams.get('lang') || localStorage.getItem('portfolio-lang') || 'ar';
     localStorage.setItem('portfolio-lang', lang);
     
     const docEl = document.documentElement;
